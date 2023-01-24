@@ -37,6 +37,49 @@
             Y: =0
             ZIndex: =1
 
+            Gallery16 As gallery.galleryHorizontal:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Height: =362
+                Items: =Testimonials
+                TemplateSize: =400
+                Width: =930
+                X: =128
+                Y: =146
+                ZIndex: =1
+
+                Label74 As label:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =47
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Customer
+                    X: =98
+                    Y: =44
+                    ZIndex: =1
+
+                HtmlText1 As htmlViewer:
+                    Height: =70
+                    HtmlText: =ThisItem.Description
+                    OnSelect: =Select(Parent)
+                    X: =73
+                    Y: =113
+                    ZIndex: =2
+
+                Label75 As label:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =22
+                    OnSelect: =Select(Parent)
+                    Size: =20
+                    Text: ="❝"
+                    Width: =25
+                    X: =48
+                    Y: =91
+                    ZIndex: =3
+
     Icon36 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(250, 250, 250, 1)
