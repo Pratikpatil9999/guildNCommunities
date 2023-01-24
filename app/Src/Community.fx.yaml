@@ -923,11 +923,11 @@
 
         Container6 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =466
+            Height: =481
             Visible: =SeeAllEventPopUp
             Width: =1002
             X: =210
-            Y: =219
+            Y: =204
             ZIndex: =15
 
             "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
@@ -937,8 +937,9 @@
                 Layout: =Layout.Vertical
                 TemplatePadding: =0
                 TemplateSize: =Min(104, Self.Height - 60)
-                Width: =995
-                Y: =36
+                Width: =940
+                X: =30
+                Y: =62
                 ZIndex: =1
 
                 Title19 As label:
@@ -1048,7 +1049,8 @@
                 Icon: =Icon.CancelBadge
                 OnSelect: =Set(SeeAllEventPopUp,false)
                 Width: =56
-                X: =946
+                X: =914
+                Y: =25
                 ZIndex: =2
 
             Rectangle13 As rectangle:

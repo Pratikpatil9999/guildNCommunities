@@ -237,7 +237,7 @@
                 Height: =61
                 Icon: =Icon.Send
                 OnSelect: |
-                    =If(!IsBlank(TextInput5.Text) ,Patch(Comment, Defaults(Comment), {
+                    =If(!IsBlank(Trim(TextInput5.Text)) ,Patch(Comment, Defaults(Comment), {
                         'User Image':User().Image,
                         Comment: TextInput5.Text,
                         BlogID: data.ID

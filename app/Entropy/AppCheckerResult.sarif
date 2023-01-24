@@ -18275,6 +18275,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.communityDropdown.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.communityDropdown.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "createTestimonial",
+                "type": "createTestimonial.Canvas16.DataCard56.communityDropdown"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App._calendarVisible"
                 }
               ],
