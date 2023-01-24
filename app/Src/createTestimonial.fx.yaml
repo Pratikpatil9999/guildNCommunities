@@ -38,3 +38,125 @@
             Y: =0
             ZIndex: =1
 
+            Label71 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Size: =13
+                Text: ="Cutomer Name"
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+            TextInput17 As text:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                Default: =
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                FocusedBorderThickness: =4
+                HintText: ="Enter customer name here."
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Size: =13
+                Width: =470
+                X: =245
+                Y: =40
+                ZIndex: =2
+
+            Label71_1 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Size: =13
+                Text: ="Leader Name"
+                X: =40
+                Y: =110
+                ZIndex: =3
+
+            TextInput17_1 As text:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                Default: =
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                FocusedBorderThickness: =4
+                HintText: ="Enter name of the leader who gave this testimonial"
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Size: =13
+                Width: =470
+                X: =245
+                Y: =110
+                ZIndex: =4
+
+            Label71_2 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Size: =13
+                Text: ="Designation of Leader"
+                X: =40
+                Y: =190
+                ZIndex: =5
+
+            TextInput17_2 As text:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                Default: =
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                FocusedBorderThickness: =4
+                HintText: ="Enter Designation of the leader"
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Size: =13
+                Width: =470
+                X: =245
+                Y: =190
+                ZIndex: =6
+
+            Label73 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Size: =13
+                Text: ="Description"
+                X: =40
+                Y: =267
+                ZIndex: =7
+
+            RichTextEditor2 As richTextEditor:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Default: ="Enter some <strong>rich text</strong> here."
+                Height: =237
+                Width: =575
+                X: =245
+                Y: =267
+                ZIndex: =8
+
+    Icon50 As icon.BackArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(250, 250, 250, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(allTestimonial)
+        Width: =50
+        X: =25
+        Y: =12
+        ZIndex: =4
+

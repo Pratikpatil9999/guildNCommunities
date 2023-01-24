@@ -89,7 +89,7 @@
         "Name": "Label20",
         "Parent": "UpcomingGuild",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1355,
+        "PublishOrderIndex": 1360,
         "Rules": [
           {
             "Category": "Data",
@@ -403,7 +403,7 @@
         "Name": "Image25",
         "Parent": "UpcomingGuild",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1356,
+        "PublishOrderIndex": 1361,
         "Rules": [
           {
             "Category": "Data",
@@ -650,7 +650,7 @@
         "Name": "Image25_1",
         "Parent": "UpcomingGuild",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1357,
+        "PublishOrderIndex": 1362,
         "Rules": [
           {
             "Category": "Data",
@@ -897,7 +897,7 @@
         "Name": "Image25_2",
         "Parent": "UpcomingGuild",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1358,
+        "PublishOrderIndex": 1363,
         "Rules": [
           {
             "Category": "Data",
