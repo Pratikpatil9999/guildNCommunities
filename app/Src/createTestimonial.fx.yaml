@@ -49,7 +49,7 @@
                 Y: =40
                 ZIndex: =1
 
-            TextInput17 As text:
+            customerName As text:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
@@ -79,7 +79,7 @@
                 Y: =110
                 ZIndex: =3
 
-            TextInput17_1 As text:
+            leaderName As text:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
@@ -98,7 +98,7 @@
                 Y: =110
                 ZIndex: =4
 
-            Label71_2 As label:
+            labelleaderDesignation As label:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -109,7 +109,7 @@
                 Y: =110
                 ZIndex: =5
 
-            TextInput17_2 As text:
+            leaderDesignation As text:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
@@ -139,7 +139,7 @@
                 Y: =207
                 ZIndex: =7
 
-            RichTextEditor2 As richTextEditor:
+            testimonialDesc As richTextEditor:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Default: ="Enter some <strong>rich text</strong> here."
                 Height: =237
@@ -152,6 +152,9 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: |+
+                    =If(IsBlank(Trim(labelleaderDesignation.Text)) || (IsBlank(Trim(Substitute(Substitute(Substitute(testimonialDesc.HtmlText,"&nbsp;",""),"<p>",""),"</p>",""))))||IsBlank(Trim(customerName.Text))||IsBlank(Trim(leaderName.Text))||IsBlank(Trim(leaderDesignation.Text)), DisplayMode.Disabled, DisplayMode.Edit)
+                    
                 Fill: =RGBA(0, 51, 102, 1)
                 FontWeight: =FontWeight.Semibold
                 HoverColor: =RGBA(255, 255, 255, 1)

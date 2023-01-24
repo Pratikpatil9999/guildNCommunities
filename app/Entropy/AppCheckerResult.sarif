@@ -18155,19 +18155,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.TextInput17.AccessibleLabel"
+                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.customerName.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.TextInput17.AccessibleLabel",
+                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.customerName.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "createTestimonial",
-                "type": "createTestimonial.Canvas16.DataCard56.TextInput17"
+                "type": "createTestimonial.Canvas16.DataCard56.customerName"
               }
             }
           ],
@@ -18185,19 +18185,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.TextInput17_1.AccessibleLabel"
+                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.leaderName.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.TextInput17_1.AccessibleLabel",
+                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.leaderName.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "createTestimonial",
-                "type": "createTestimonial.Canvas16.DataCard56.TextInput17_1"
+                "type": "createTestimonial.Canvas16.DataCard56.leaderName"
               }
             }
           ],
@@ -18215,19 +18215,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.TextInput17_2.AccessibleLabel"
+                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.leaderDesignation.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.TextInput17_2.AccessibleLabel",
+                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.leaderDesignation.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "createTestimonial",
-                "type": "createTestimonial.Canvas16.DataCard56.TextInput17_2"
+                "type": "createTestimonial.Canvas16.DataCard56.leaderDesignation"
               }
             }
           ],
@@ -18245,19 +18245,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.RichTextEditor2.AccessibleLabel"
+                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.testimonialDesc.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.RichTextEditor2.AccessibleLabel",
+                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.testimonialDesc.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "createTestimonial",
-                "type": "createTestimonial.Canvas16.DataCard56.RichTextEditor2"
+                "type": "createTestimonial.Canvas16.DataCard56.testimonialDesc"
               }
             }
           ],
