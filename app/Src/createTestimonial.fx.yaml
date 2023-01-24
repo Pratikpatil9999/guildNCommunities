@@ -21,7 +21,7 @@
 
     Canvas16 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
-        Height: =Parent.Height - Self.Y
+        Height: =680
         Width: =Parent.Width
         Y: =RectQuickActionBar21.Y + RectQuickActionBar21.Height
         ZIndex: =3
@@ -32,7 +32,7 @@
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =Parent.Height - 100
+            Height: =747
             Width: =Parent.Width
             X: =0
             Y: =0
@@ -58,7 +58,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 FocusedBorderThickness: =4
-                HintText: ="Enter customer name here."
+                HintText: ="Enter customer name"
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
@@ -105,8 +105,8 @@
                 FontWeight: =FontWeight.Semibold
                 Size: =13
                 Text: ="Designation of Leader"
-                X: =40
-                Y: =190
+                X: =748
+                Y: =110
                 ZIndex: =5
 
             TextInput17_2 As text:
@@ -118,14 +118,14 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 FocusedBorderThickness: =4
-                HintText: ="Enter Designation of the leader"
+                HintText: ="Enter designation of the leader"
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
                 Size: =13
-                Width: =470
-                X: =245
-                Y: =190
+                Width: =381
+                X: =898
+                Y: =110
                 ZIndex: =6
 
             Label73 As label:
@@ -136,17 +136,31 @@
                 Size: =13
                 Text: ="Description"
                 X: =40
-                Y: =267
+                Y: =207
                 ZIndex: =7
 
             RichTextEditor2 As richTextEditor:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Default: ="Enter some <strong>rich text</strong> here."
                 Height: =237
-                Width: =575
+                Width: =470
                 X: =245
-                Y: =267
+                Y: =207
                 ZIndex: =8
+
+            Button32 As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(0, 51, 102, 1)
+                FontWeight: =FontWeight.Semibold
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                Size: =15
+                Text: ="Button"
+                X: =634
+                Y: =560
+                ZIndex: =9
 
     Icon50 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
