@@ -6,7 +6,7 @@
         Set(currCommunity,Dropdown2_4.Selected.Communities);
         If(currCommunity="All",Set(newsLetterList,newsletters),Set(newsLetterList,Filter(newsletters,Community=currCommunity)));
         Set(openPopup,false);
-        Set(DropDown,false);
+        //Set(DropDown,false);
         
         If(isNewsLetterAdded, 
         
