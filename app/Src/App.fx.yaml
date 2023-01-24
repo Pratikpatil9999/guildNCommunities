@@ -1,0 +1,34 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =/*resets calendar view and date selection to today*/
+        ClearCollect(colHorizontalMenu,
+        
+        {Title:"Home",Screen:Home, Id:1, ParentTab: ""},
+        
+        {Title:"Insights",Screen:allBlogs, Id:2, ParentTab: ""},
+        {Title:"White Paper",Screen:createBlog, Id:2, ParentTab: "Blog"},
+        {Title:"Blog",Screen:allBlogs, Id:2, ParentTab: "Blog"},
+        {Title:"Case Study",Screen:createBlog, Id:2, ParentTab: "Blog"},
+        {Title:"E-learning",Screen:createBlog, Id:2, ParentTab: "Blog"},
+        
+        
+        {Title:"FAQs",Screen: Blank(),Id:3, ParentTab: "",LaunchLink: Launch("https://www.google.com")},
+        
+        
+        {Title:"Templates",Screen:Community, Id:4, ParentTab: ""},
+        
+        
+        {Title:"Dashboard",Screen:Dashboard, Id:5, ParentTab: ""}
+        
+        );
+        
+        Set(varMenuPrimaryColor, RGBA(4, 42, 61, 1));
+        Set(varMenuSecondaryColor, RGBA(4, 166, 235, 1));
+        Set(varTabSelected, 1);
+        Set(_dateSelected, Today());
+        Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), Days));
+        Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
+        Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));        
+        Set(_calendarVisible, true)
+

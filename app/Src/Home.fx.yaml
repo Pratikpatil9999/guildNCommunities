@@ -1,0 +1,1470 @@
+"Home As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    BackgroundImage: =
+    OnVisible: |-
+        =UpdateContext({varPageNumber:1});
+        Set(ShareItem,false);
+        Set(DropDown,false);
+        Set(DropDownHome,false);
+        Set(DropDownDashboard,false);
+        ClearCollect(EventCal,Filter(Event, Date>=Now()));
+
+    RectQuickActionBar1 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(241, 241, 241, 1)
+        Height: =70
+        Width: =1366
+        ZIndex: =1
+
+    LblAppName1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =103
+        Size: =18
+        Text: ="[Title]"
+        Width: =1366
+        Y: =226
+        ZIndex: =2
+
+    Canvas1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =70
+        ZIndex: =3
+
+        DataCard8 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =1366
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+            Component2_1 As HomeImage:
+
+            Label6 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Bold
+                Height: =157
+                Size: =28
+                Text: ="Zensar Guilds and Communities 2023"
+                Width: =412
+                X: =896
+                Y: =34
+                ZIndex: =2
+
+        DataCard13 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =1366
+            X: =0
+            Y: =1
+            ZIndex: =4
+
+            Component3_1 As About:
+
+            TextInput9 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                Default: ="ABOUT"
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =4
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Bold
+                Height: =49
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Size: =27
+                Width: =285
+                X: =558
+                Y: =254
+                ZIndex: =2
+
+            TextInput9_1 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                Default: ="Explore More Communities"
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =63
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Size: =27
+                Width: =543
+                X: =15
+                Y: =664
+                ZIndex: =3
+
+        DataCard2 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =620
+            Width: =1366
+            X: =0
+            Y: =2
+            ZIndex: =6
+
+            "galPaginated As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Height: =556
+                Items: =If(varPageNumber=1, FirstN(Guild,ddPageSize.SelectedText.Value*varPageNumber), LastN(FirstN(Guild,ddPageSize.SelectedText.Value*varPageNumber), ddPageSize.SelectedText.Value*1))
+                TemplatePadding: =0
+                TemplateSize: =296
+                Width: =902
+                X: =5
+                ZIndex: =1
+
+                Image3 As image:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =180
+                    Image: =ThisItem.'Guild Cover Image'
+                    OnSelect: =Select(Parent)
+                    Width: =242
+                    X: =32
+                    Y: =16
+                    ZIndex: =1
+
+                Title1 As label:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Bold
+                    Height: =103
+                    LineHeight: =1.3
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =20
+                    Text: =ThisItem.Title
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =264
+                    X: =32
+                    Y: =Image3.Y + Image3.Height + 16
+                    ZIndex: =2
+
+                Subtitle1 As label:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.Lato
+                    Height: =161
+                    LineHeight: =1.3
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: =ThisItem.'Short Description'
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =264
+                    X: =Title1.X
+                    Y: =330
+                    ZIndex: =3
+
+                Icon11 As icon.NextArrow:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Color: =RGBA(0, 89, 178, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Height: =26
+                    Icon: =Icon.NextArrow
+                    OnSelect: |-
+                        =Select(Parent);
+                        Navigate(Community,Cover,{data:galPaginated.Selected});
+                    Width: =44
+                    X: =181
+                    Y: =499
+                    ZIndex: =4
+
+                Icon26 As icon.Share:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Color: =RGBA(0, 89, 178, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Height: =26
+                    Icon: =Icon.Share
+                    OnSelect: |-
+                        =Set(ShareItem,true);
+                        Set(selectedId,ThisItem.ID);
+                    Width: =44
+                    X: =230
+                    Y: =497
+                    ZIndex: =5
+
+            Icon6 As icon.AddUser:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(250, 250, 250, 1)
+                Height: =51
+                Icon: =Icon.AddUser
+                OnSelect: =Navigate('Guild Form 1')
+                Width: =49
+                X: =818
+                ZIndex: =8
+
+            ddPageSize As dropdown:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Font: =Font.'Lato Black'
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Items: =["3","10","20"]
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 89, 178, 1)
+                SelectionFill: =RGBA(0, 51, 102, 1)
+                Size: =13
+                Visible: =false
+                Width: =78
+                X: =22
+                ZIndex: =14
+
+            btnPrevious As arrow.backArrow:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisplayMode: =If(varPageNumber = 1, Disabled, Edit)
+                Fill: =RGBA(0, 51, 102, 1)
+                OnSelect: |-
+                    =UpdateContext({varPageNumber: varPageNumber - 1})
+                X: =329
+                Y: =557
+                ZIndex: =15
+
+            lblPagination As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =32
+                Size: =13
+                Text: =varPageNumber & " of " & RoundUp(CountRows(Guild)/ddPageSize.SelectedText.Value,0)
+                Width: =80
+                X: =416
+                Y: =566
+                ZIndex: =16
+
+            btnNext As arrow:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisplayMode: =If(ddPageSize.SelectedText.Value*varPageNumber<CountRows(Guild), DisplayMode.Edit,Disabled)
+                Fill: =RGBA(0, 51, 102, 1)
+                OnSelect: |-
+                    =UpdateContext({varPageNumber: varPageNumber + 1})
+                X: =522
+                Y: =557
+                ZIndex: =17
+
+            Label43 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                OnSelect: =Set(AllGuilds,true)
+                Size: =18
+                Text: ="See All"
+                X: =44
+                ZIndex: =18
+
+            "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+                BorderColor: =RGBA(0, 36, 71, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =485
+                Items: =EventCal
+                Layout: =Layout.Vertical
+                TemplatePadding: =0
+                TemplateSize: =Min(96, Self.Height - 60)
+                Width: =379
+                X: =945
+                Y: =35
+                ZIndex: =19
+
+                Title15 As label:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(235, 245, 255, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =37
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: =ThisItem.Title
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =340
+                    X: =39
+                    Y: =18
+                    ZIndex: =1
+
+                Separator4 As rectangle:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Fill: =RGBA(0, 89, 178, 1)
+                    Height: =1
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Parent.TemplateHeight - 1
+                    ZIndex: =3
+
+                Label47 As label:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =41
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Date
+                    Width: =143
+                    X: =39
+                    Y: =55
+                    ZIndex: =4
+
+        DataCard3 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =85
+            Width: =1366
+            X: =0
+            Y: =4
+            ZIndex: =8
+
+            Label1 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =96
+                Size: =27
+                Text: ="Message From Leaders"
+                Width: =1336
+                ZIndex: =1
+
+            TextInput7 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =0
+                Color: =RGBA(0, 0, 0, 1)
+                Default: ="Message From Leaders"
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =4
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Bold
+                Height: =52
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Size: =27
+                Width: =470
+                X: =434
+                Y: =28
+                ZIndex: =2
+
+        DataCard1 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =357
+            Width: =1366
+            X: =0
+            Y: =5
+            ZIndex: =9
+
+            MicrosoftStream2 As microsoftStreamPlayback:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                Fill: =RGBA(232, 232, 232, 1)
+                Height: =345
+                StreamUrl: |-
+                    ="https://web.microsoftstream.com/video/ff5f52b1-5a4b-4a45-8ead-988bf75d4fd2"
+                Width: =586
+                X: =6
+                Y: =8
+                ZIndex: =1
+
+            Image10 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =5
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =159
+                Image: =Quotes1
+                ImagePosition: =ImagePosition.Center
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Width: =621
+                X: =657
+                Y: =23
+                ZIndex: =3
+
+            Image10_4 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =5
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =160
+                Image: =Quotes1
+                ImagePosition: =ImagePosition.Center
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Width: =621
+                X: =657
+                Y: =197
+                ZIndex: =4
+
+        DataCard4 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =1366
+            X: =0
+            Y: =6
+            ZIndex: =10
+
+            TextInput4 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =0
+                Color: =RGBA(0, 0, 0, 1)
+                Default: ="L & D Team"
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =90
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Size: =29
+                Width: =1339
+                X: =12
+                Y: =6
+                ZIndex: =1
+
+            TextInput11 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                Default: ="L&D Team"
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =4
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Bold
+                Height: =58
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Size: =27
+                Width: =363
+                X: =500
+                Y: =22
+                ZIndex: =2
+
+        DataCard5 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =362
+            Width: =1366
+            X: =0
+            Y: =7
+            ZIndex: =11
+
+            Image12 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =362
+                Image: =priyatest
+                ImagePosition: =ImagePosition.Fill
+                Width: =679
+                X: =10
+                ZIndex: =1
+
+            Image13 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =362
+                Image: =poojatest
+                ImagePosition: =ImagePosition.Fill
+                Width: =653
+                X: =689
+                ZIndex: =2
+
+            Image6 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =340
+                Image: =priyatest1
+                ImagePosition: =ImagePosition.Fill
+                Width: =197
+                Y: =22
+                ZIndex: =3
+
+            Image22 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =325
+                Image: =poojatest1
+                ImagePosition: =ImagePosition.Fill
+                Width: =189
+                X: =689
+                Y: =22
+                ZIndex: =4
+
+        DataCard6 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =85
+            Width: =1366
+            X: =0
+            Y: =3
+            ZIndex: =12
+
+            UpcomingGuild_1 As UpcomingGuild:
+
+            TextInput10 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                Default: ="Upcoming Guilds"
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =4
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Bold
+                Height: =63
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Size: =27
+                Width: =359
+                X: =484
+                Y: =12
+                ZIndex: =2
+
+    Timer1 As timer:
+        AutoStart: =true
+        Duration: =50
+        Fill: =RGBA(0, 51, 102, 1)
+        Height: =55
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnTimerEnd: |
+            =
+            If(Not(IsBlank(Param("blog"))),Navigate(detailBlog,ScreenTransition.Cover,{data:LookUp(Blog,ID=Value(Param("blog")))}));
+            If(Not(IsBlank(Param("guild"))),Navigate(Community,ScreenTransition.Cover,{data:LookUp(Guild,ID=Value(Param("guild")))}))
+        Text: =Text("Timer")
+        Visible: =false
+        X: =1090
+        Y: =648
+        ZIndex: =14
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =14
+
+        Rectangle4 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(250, 250, 250, 1)
+            Height: =196
+            Visible: =varShowPopup
+            Width: =629
+            X: =258
+            Y: =272
+            ZIndex: =7
+
+        Image14 As image:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =71
+            Image: ='facebook-square'
+            OnSelect: |-
+                =Launch("https://m.facebook.com/100064703649380")
+            Visible: =varShowPopup
+            Width: =82
+            X: =315
+            Y: =341
+            ZIndex: =8
+
+        Image14_1 As image:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =71
+            Image: ='square-twitter'
+            OnSelect: |-
+                =Launch("https://twitter.com/Zensar?t=aCN3En6tnYDDbAYJDQvnGw&s=09")
+            Visible: =varShowPopup
+            Width: =85
+            X: =506
+            Y: =341
+            ZIndex: =9
+
+        Image14_2 As image:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =71
+            Image: =linkedin
+            OnSelect: |-
+                =Launch("https://www.linkedin.com/company/zensar")
+            Visible: =varShowPopup
+            Width: =67
+            X: =742
+            Y: =341
+            ZIndex: =10
+
+        Label8 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =60
+            Size: =27
+            Text: ="Share By"
+            Visible: =varShowPopup
+            Width: =172
+            X: =258
+            Y: =272
+            ZIndex: =11
+
+        Icon9 As icon.Cancel:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =39
+            Icon: =Icon.Cancel
+            OnSelect: =Set(varShowPopup,false)
+            Visible: =varShowPopup
+            Width: =51
+            X: =835
+            Y: =275
+            ZIndex: =12
+
+    Icon3_4 As icon.ChevronDown:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =19
+        Icon: =Icon.ChevronDown
+        OnSelect: =Set(DropDownHome,!DropDownHome)
+        Width: =20
+        X: =173
+        Y: =29
+        ZIndex: =27
+
+    NavBarGr As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =27
+
+        Rectangle2 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            Height: =262
+            Visible: =DropDown
+            Width: =140
+            X: =209
+            Y: =70
+            ZIndex: =17
+
+        Button17 As button:
+            Align: =Align.Left
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =43
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(allBlogs)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Blog"
+            Visible: =DropDown
+            Width: =140
+            X: =209
+            Y: =70
+            ZIndex: =18
+
+        Button18 As button:
+            Align: =Align.Left
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(whitePaperHome);
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="White Papers"
+            Visible: =DropDown
+            Width: =140
+            X: =208
+            Y: =297
+            ZIndex: =19
+
+        Button18_1 As button:
+            Align: =Align.Left
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            FontWeight: =FontWeight.Semibold
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(caseStudyHome);
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Case Study"
+            Visible: =DropDown
+            Width: =140
+            X: =209
+            Y: =117
+            ZIndex: =20
+
+        Button18_2 As button:
+            Align: =Align.Left
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            FontWeight: =FontWeight.Semibold
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(eLearningHome)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="E-learning "
+            Visible: =DropDown
+            Width: =140
+            X: =209
+            Y: =215
+            ZIndex: =21
+
+        Button18_3 As button:
+            Align: =Align.Left
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =58
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Customer Testomonial"
+            Visible: =DropDown
+            Width: =140
+            X: =209
+            Y: =157
+            ZIndex: =22
+
+        Button20_1 As button:
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Set(DropDownDashboard,!DropDownDashboard)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Dashboard"
+            Visible: =If(!IsBlank(LookUp(User, Email=User().Email && Role="admin")), true, false)
+            Width: =167
+            X: =590
+            ZIndex: =24
+
+        Button20_5 As button:
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: |-
+                =Navigate(Home);
+                Set(DropDownHome,!DropDownHome);
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Home"
+            Width: =125
+            X: =77
+            ZIndex: =26
+
+    Image26 As image:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =60
+        Image: =User().Image
+        OnSelect: =Navigate(Profile)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Width: =60
+        X: =1288
+        Y: =5
+        ZIndex: =28
+
+    Icon3_5 As icon.ChevronDown:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =19
+        Icon: =Icon.ChevronDown
+        OnSelect: =Set(DropDownDashboard,!DropDownDashboard)
+        Visible: =If(!IsBlank(LookUp(User, Email=User().Email && Role="admin")), true, false)
+        Width: =20
+        X: =731
+        Y: =28
+        ZIndex: =35
+
+    HomeDropDown As group:
+        Height: =5
+        Width: =5
+        X: =481
+        Y: =254
+        ZIndex: =35
+
+        Rectangle3 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            Height: =337
+            Visible: =DropDownHome
+            Width: =138
+            X: =70
+            Y: =65
+            ZIndex: =29
+
+        Button1 As button:
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =77
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =SetFocus(TextInput7)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Leaders Message"
+            Visible: =DropDownHome
+            Width: =128
+            X: =74
+            Y: =265
+            ZIndex: =30
+
+        Button1_2 As button:
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =48
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: |
+                =SetFocus(TextInput9)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="About"
+            Visible: =DropDownHome
+            Width: =130
+            X: =74
+            Y: =65
+            ZIndex: =31
+
+        Button1_3 As button:
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =52
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =SetFocus(TextInput11)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="L&D Team"
+            Visible: =DropDownHome
+            Width: =128
+            X: =74
+            Y: =342
+            ZIndex: =32
+
+        Button1_4 As button:
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =77
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =SetFocus(TextInput10)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Upcoming Guilds"
+            Visible: =DropDownHome
+            Width: =128
+            X: =74
+            Y: =190
+            ZIndex: =33
+
+        Button1_5 As button:
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =75
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =SetFocus(TextInput9_1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Explore Communities"
+            Visible: =DropDownHome
+            Width: =134
+            X: =74
+            Y: =113
+            ZIndex: =34
+
+    DtopDownDash As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =38
+
+        Rectangle6 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            Height: =50
+            Visible: =DropDownDashboard
+            Width: =149
+            X: =602
+            Y: =71
+            ZIndex: =36
+
+        Button5 As button:
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(Admin)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Admin Center"
+            Visible: =DropDownDashboard
+            Width: =149
+            X: =602
+            Y: =70
+            ZIndex: =37
+
+    Rectangle10 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(90, 70, 100, 0.3)
+        Height: =763
+        OnSelect: =Set(ShareItem,false)
+        Visible: =ShareItem
+        Width: =1366
+        Y: =5
+        ZIndex: =41
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =41
+
+        Rectangle9 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(100, 101, 102, 0.3)
+            Height: =763
+            OnSelect: =Set(AllGuilds,false)
+            Visible: =AllGuilds
+            Width: =1366
+            Y: =5
+            ZIndex: =39
+
+        Container3 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =564
+            Visible: =AllGuilds
+            Width: =1062
+            X: =134
+            Y: =119
+            ZIndex: =40
+
+            "Gallery9 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Height: =474
+                Items: =Guild
+                Layout: =Layout.Vertical
+                TemplatePadding: =0
+                TemplateSize: =Min(96, Self.Height - 60)
+                Width: =1047
+                Y: =52
+                ZIndex: =1
+
+                Title18 As label:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(235, 245, 255, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =20
+                    Text: =ThisItem.Title
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth - 104
+                    X: =32
+                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                Separator9 As rectangle:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Fill: =RGBA(0, 89, 178, 1)
+                    Height: =1
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Parent.TemplateHeight - 1
+                    ZIndex: =3
+
+            Icon20 As icon.CancelBadge:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =38
+                Icon: =Icon.CancelBadge
+                OnSelect: =Set(AllGuilds,false)
+                Width: =46
+                X: =1016
+                Y: =2
+                ZIndex: =2
+
+    Container5 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(153, 173, 194, 0.8)
+        Height: =613
+        Visible: =ShareItem
+        Width: =1003
+        X: =145
+        Y: =94
+        ZIndex: =42
+
+        UserName As text:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Height: =53
+            HintText: ="Search Person by name or email"
+            HoverBorderColor: =RGBA(0, 89, 178, 1)
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(153, 205, 255, 1)
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Size: =13
+            Width: =454
+            X: =144
+            Y: =76
+            ZIndex: =1
+
+        "Gallery18 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =407
+            Items: |-
+                =Office365Users.SearchUserV2({searchTerm:UserName.Text,top:3}).value
+            Layout: =Layout.Vertical
+            TemplatePadding: =0
+            TemplateSize: =Min(104, Self.Height - 60)
+            Width: =887
+            X: =54
+            Y: =166
+            ZIndex: =1
+
+            Title26 As label:
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =20
+                Text: =ThisItem.DisplayName
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - 104
+                X: =52
+                Y: =20
+                ZIndex: =1
+
+            Subtitle20 As label:
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =18
+                Text: =ThisItem.Mail
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - 104
+                X: =32
+                Y: =Title26.Y + Title26.Height + 4
+                ZIndex: =2
+
+            NextArrow20 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =60
+                Icon: =Icon.ChevronRight
+                OnSelect: |-
+                    =Select(Parent);
+                    Office365Outlook.SendEmail(Gallery18.Selected.Mail,"Search","https://web.powerapps.com/apps/74aaf625-5c51-4fef-b53b-11bbac0ef01c?guild="&selectedId );
+                    Notify("Mail Sent Successfully");
+                    Set(ShareItem,false);
+                    Reset(UserName);
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                TabIndex: =0
+                Tooltip: ="View item details"
+                Width: =60
+                X: =Parent.TemplateWidth - Self.Width - 5
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =3
+
+            Separator22 As rectangle:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Fill: =RGBA(0, 89, 178, 1)
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =4
+
+        Icon5 As icon.CancelBadge:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =46
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =Set(ShareItem,false);
+                Reset(UserName);
+            Width: =49
+            X: =954
+            Y: =4
+            ZIndex: =2
+
+        Icon27 As icon.Search:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =46
+            Icon: =Icon.Search
+            Width: =42
+            X: =78
+            Y: =80
+            ZIndex: =3
+
+    Image1_3 As image:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =70
+        Image: =logo
+        Width: =75
+        ZIndex: =47
+
+    Button20_9 As button:
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(241, 241, 241, 1)
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+        OnSelect: =Set(DropDown,!DropDown)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Insights"
+        Width: =125
+        X: =208
+        ZIndex: =48
+
+    Button20_13 As button:
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(241, 241, 241, 1)
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+        OnSelect: |-
+            =Launch("https://zensar-my.sharepoint.com/:b:/p/p_tolsankar/EdZQ7adEc2lCkCTMPL5iTfsBswbPCaYBsqaCGvXm_sX0mA?e=zeQTPR
+            ")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="FAQs"
+        Width: =125
+        X: =343
+        ZIndex: =49
+
+    Button20_14 As button:
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(241, 241, 241, 1)
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+        OnSelect: |-
+            =Launch("https://zensar-my.sharepoint.com.office.prod.zensar.myshn.net/:p:/p/p_tolsankar/Eab9JQSuFR9FmzSzK1ypztwBU1hPasrLLLKk15ay6hi7Iw?e=hCMMdC
+            ")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Templates"
+        Width: =125
+        X: =472
+        ZIndex: =50
+
+    Icon3 As icon.ChevronDown:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =19
+        Icon: =Icon.ChevronDown
+        OnSelect: =Set(DropDown,!DropDown)
+        Width: =20
+        X: =310
+        Y: =30
+        ZIndex: =51
+
+    Button18_16 As button:
+        Align: =Align.Left
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(241, 241, 241, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =39
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+        OnSelect: =Navigate(newsLetterHome);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Newsletter"
+        Visible: =DropDown
+        Width: =140
+        X: =209
+        Y: =258
+        ZIndex: =52
+

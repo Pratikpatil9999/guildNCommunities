@@ -1,0 +1,260 @@
+"caseStudyForm As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =RGBA(232, 232, 232, 1)
+    OnVisible: |-
+        =ClearCollect(UserCommunities,Filter(User,Email=User().Email));
+        Set(addedFile,false);
+        ResetForm(Form8);
+        Reset(TextInput12);
+
+    RectQuickActionBar17 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName14 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =88
+        Size: =18
+        Text: ="Form"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Icon29 As icon.ArrowLeft:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(250, 250, 250, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.ArrowLeft
+        OnSelect: |-
+            =ResetForm(Form8);
+            Reset(TextInput12);
+            Navigate(caseStudyHome);
+        X: =66
+        Y: =12
+        ZIndex: =3
+
+    Button25 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =If(addedFile && !IsBlank(Trim(TextInput12.Text)) && IsBlank(LookUp(caseStudy,Title=TextInput12.Text)),
+            
+            Patch(caseStudy, Defaults(caseStudy), {
+                Title: TextInput12.Text,
+                Community: Dropdown12.Selected.Communities
+            }, Form8.Updates);
+            
+            
+            Set(currentGuildName, LookUp(Community_1, Title=Dropdown12.Selected.Communities).Guild);
+            Set(currentGuild, LookUp(Guild, Title=currentGuildName));
+            
+            Set(channelId,First(Split(currentGuild.Channel,"\")).Result);
+            Set(teamId,First(Split(currentGuild.Team,"\")).Result);
+            
+            
+            ResetForm(Form8);
+            Reset(TextInput12);
+            Set(isCaseStudyAdded, true);
+            Navigate(caseStudyHome);
+            Notify( "Case Study Added Successfully" , NotificationType.Success, 1000);
+            
+            ,
+            Notify(
+                    "All Fields Are Required OR Another Case Study With Same Name Already Exists",
+                    NotificationType.Error
+                );
+            );
+        Size: =15
+        Text: ="Submit"
+        X: =603
+        Y: =624
+        ZIndex: =5
+
+    Form8 As form:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DataSource: =caseStudy
+        Height: =259
+        Item: =Defaults(caseStudy)
+        NumberOfColumns: =1
+        Width: =424
+        X: =483
+        Y: =348
+        ZIndex: =6
+
+        Attachments_DataCard5 As typedDataCard.attachmentsEditCard:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="{Attachments}"
+            Default: =ThisItem.Attachments
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@caseStudy],DataSourceInfo.DisplayName,"{Attachments}")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =211
+            Required: =false
+            Update: =DataCardValue32.Attachments
+            Width: =424
+            X: =0
+            Y: =0
+            ZIndex: =7
+
+            DataCardKey44 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =34
+                Size: =13
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue32 As attachments:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Height: =185
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                IsInDataCard: =true
+                ItemColor: =RGBA(255, 255, 255, 1)
+                ItemFill: =RGBA(0, 51, 102, 1)
+                ItemHoverColor: =RGBA(0, 0, 0, 1)
+                ItemHoverFill: =RGBA(153, 205, 255, 1)
+                Items: =Parent.Default
+                MaxAttachments: =1
+                OnAddFile: |
+                    =
+                    If(
+                        Not(
+                            EndsWith(
+                                First(Self.Attachments).Name,
+                                ".pdf"
+                            )
+                        ),
+                        Notify(
+                            "Only Pdf file is allowed",
+                            NotificationType.Error
+                        );
+                        Reset(Self),
+                        Set(addedFile,true);
+                    );
+                OnRemoveFile: =Set(addedFile,true);
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 89, 178, 1)
+                Tooltip: =Parent.DisplayName
+                Width: =360
+                X: =30
+                Y: =DataCardKey44.Y + DataCardKey44.Height + 5
+                ZIndex: =2
+
+            ErrorMessage44 As label:
+                AutoHeight: =true
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue32.Y + DataCardValue32.Height
+                ZIndex: =3
+
+            StarVisible44 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey44.Height
+                Size: =13
+                Text: ="*"
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey44.Y
+                ZIndex: =4
+
+    Dropdown12 As dropdown:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =56
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Items: =UserCommunities
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        Size: =13
+        Width: =359
+        X: =511
+        Y: =292
+        ZIndex: =7
+
+    TextInput12 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =59
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =359
+        X: =511
+        Y: =193
+        ZIndex: =8
+
+    Label15 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Size: =13
+        Text: =" *   Community"
+        X: =483
+        Y: =252
+        ZIndex: =9
+
+    Label16 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Size: =13
+        Text: =" *   Title"
+        X: =483
+        Y: =153
+        ZIndex: =10
+

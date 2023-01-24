@@ -1,0 +1,202 @@
+{
+  "55bd11ce-1540-4e1d-8336-43032c5b7e78": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1613/1.0.1613.3125/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "55bd11ce-1540-4e1d-8336-43032c5b7e78"
+  },
+  "59bc595d-2c49-4295-b900-697078d27880": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/juanq/gateway/greyhound/3000.150.11/1.0.1613.3116/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://zensar.sharepoint.com/sites/GuildsandCommunities": {
+        "dataSources": {
+          "Activity": {
+            "tableName": "ef214d2d-8a3b-4f81-bfad-abb5b0d71e46"
+          },
+          "Blog": {
+            "tableName": "e906b85c-c7f1-49c6-8521-2726ca9cfc69"
+          },
+          "Blog_1": {
+            "tableName": "e906b85c-c7f1-49c6-8521-2726ca9cfc69"
+          },
+          "caseStudy": {
+            "tableName": "0ca5fda7-c931-44b2-b0a2-fd5555a027a8"
+          },
+          "Comment": {
+            "tableName": "debaacae-cb2b-4d75-bf53-16470368f1e2"
+          },
+          "Community_1": {
+            "tableName": "e3e59fbf-0c7d-4482-bbea-7239f2499602"
+          },
+          "Community_2": {
+            "tableName": "e3e59fbf-0c7d-4482-bbea-7239f2499602"
+          },
+          "eLearning": {
+            "tableName": "56dbdd0d-e1eb-4936-892d-9abdca22e302"
+          },
+          "Event Track Details": {
+            "tableName": "385d1bfa-3e9d-4a32-868f-9b0fcba72a44"
+          },
+          "EventDetail": {
+            "tableName": "e1083137-8d0b-41b3-ae8f-9ab6f2636aba"
+          },
+          "EventDetails_1": {
+            "tableName": "c64fe3de-52f2-4648-9582-5506485d1149"
+          },
+          "EventFeedback": {
+            "tableName": "f426b907-cb06-41c0-81c1-13fe6b3459a1"
+          },
+          "Guild": {
+            "tableName": "fd2f121a-49eb-4e79-80ba-02382fec8763"
+          },
+          "Guild List": {
+            "tableName": "0438bbd6-0960-493d-9481-98d832abc437"
+          },
+          "Guild List_1": {
+            "tableName": "0438bbd6-0960-493d-9481-98d832abc437"
+          },
+          "Guild List1": {
+            "tableName": "7377be33-b418-4672-8378-5f286eee7424"
+          },
+          "Guild_1": {
+            "tableName": "fd2f121a-49eb-4e79-80ba-02382fec8763"
+          },
+          "Like": {
+            "tableName": "6a813ec4-e80b-4b16-a85e-06e7f84b5852"
+          },
+          "Newsletter_1": {
+            "tableName": "ac726706-5e21-4b7a-a70a-ee34cb9df8ea"
+          },
+          "newsletters": {
+            "tableName": "550d5194-4172-47bc-b414-89b48822abe1"
+          },
+          "Points": {
+            "tableName": "524d759a-316a-46bc-bc54-c5cf39728d0f"
+          },
+          "User": {
+            "tableName": "e1f12d43-e289-4b40-905c-e56517a00822"
+          },
+          "whitepapers": {
+            "tableName": "959b3282-4a5a-4cdd-a7aa-4a98379191bb"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Guild List1",
+      "Guild List",
+      "Guild List_1",
+      "Event",
+      "Guild",
+      "Community_1",
+      "Blog",
+      "Blog_1",
+      "Activity",
+      "Comment",
+      "Like",
+      "User",
+      "Community_2",
+      "Points",
+      "Event Track Details",
+      "Guild_1",
+      "EventDetails_1",
+      "EventDetail",
+      "EventFeedback",
+      "Newsletter_1",
+      "whitepapers",
+      "newsletters",
+      "eLearning",
+      "caseStudy"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "59bc595d-2c49-4295-b900-697078d27880"
+  },
+  "64b36674-d9d3-4d87-a1c2-5fcc2c94b351": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "Microsoft Teams",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1612/1.0.1612.3109/teams/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_teams"
+    },
+    "datasets": {},
+    "dataSources": [
+      "MicrosoftTeams"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "64b36674-d9d3-4d87-a1c2-5fcc2c94b351"
+  },
+  "6cba9de9-2faa-4c8d-b993-358233bbe43e": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1611/1.0.1611.3104/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users"
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users",
+      "Office365Users_1"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "6cba9de9-2faa-4c8d-b993-358233bbe43e"
+  },
+  "e55f7f25-74ca-48aa-bbfc-87ca82df5358": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/juanq/gateway/greyhound/3000.150.11/1.0.1613.3116/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://zensar.sharepoint.com/sites/GuildsandCommunities": {
+        "dataSources": {
+          "Event": {
+            "tableName": "e362d165-87fa-4b6a-b8c4-8145b1200c19"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Event"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "e55f7f25-74ca-48aa-bbfc-87ca82df5358"
+  }
+}
