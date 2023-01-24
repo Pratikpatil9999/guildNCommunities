@@ -97,6 +97,9 @@
           "Points": {
             "tableName": "524d759a-316a-46bc-bc54-c5cf39728d0f"
           },
+          "Testimonials": {
+            "tableName": "74e234cf-a1ec-4f33-bfea-aea3dcecdd15"
+          },
           "User": {
             "tableName": "e1f12d43-e289-4b40-905c-e56517a00822"
           },
@@ -130,7 +133,8 @@
       "whitepapers",
       "newsletters",
       "eLearning",
-      "caseStudy"
+      "caseStudy",
+      "Testimonials"
     ],
     "dependencies": {},
     "dependents": [],
