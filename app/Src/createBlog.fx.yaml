@@ -199,7 +199,7 @@
         Y: =234
         ZIndex: =5
 
-        Image_DataCard2 As typedDataCard.addLargePictureCard:
+        screenshot As typedDataCard.addLargePictureCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =0
@@ -235,15 +235,15 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayMode: =Parent.DisplayMode
-                Height: =AddPicture2.Height
-                Image: =If(IsBlank(AddPicture2.Media), Parent.Default, AddPicture2.Media)
+                Height: =screenshotPicture.Height
+                Image: =If(IsBlank(screenshotPicture.Media), Parent.Default, screenshotPicture.Media)
                 Tooltip: =Parent.DisplayName
-                Width: =AddPicture2.Width
-                X: =AddPicture2.X
-                Y: =AddPicture2.Y
+                Width: =screenshotPicture.Width
+                X: =screenshotPicture.X
+                Y: =screenshotPicture.Y
                 ZIndex: =2
 
-            AddPicture2 As addMedia:
+            screenshotPicture As addMedia:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChangePictureText: =""
                 Color: =RGBA(0, 0, 0, 1)

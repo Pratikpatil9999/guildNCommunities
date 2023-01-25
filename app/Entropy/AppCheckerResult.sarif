@@ -10025,19 +10025,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "createBlog.Form2.Image_DataCard2.AddPicture2.AccessibleLabel"
+                  "fullyQualifiedName": "createBlog.Form2.screenshot.screenshotPicture.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "createBlog.Form2.Image_DataCard2.AddPicture2.AccessibleLabel",
+                  "fullyQualifiedName": "createBlog.Form2.screenshot.screenshotPicture.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "createBlog",
-                "type": "createBlog.Form2.Image_DataCard2.AddPicture2"
+                "type": "createBlog.Form2.screenshot.screenshotPicture"
               }
             }
           ],

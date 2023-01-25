@@ -98,12 +98,12 @@
         Color: =RGBA(250, 250, 250, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
-        Height: =50
+        Height: =40
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(Home)
-        Width: =50
-        X: =19
-        Y: =19
+        Width: =40
+        X: =21
+        Y: =24
         ZIndex: =4
 
     newTestimonial As button:

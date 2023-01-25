@@ -155,19 +155,20 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayMode: |+
-                    =If(IsBlank(Trim(labelleaderDesignation.Text)) || (IsBlank(Trim(Substitute(Substitute(Substitute(testimonialDesc.HtmlText,"&nbsp;",""),"<p>",""),"</p>",""))))||IsBlank(Trim(customerName.Text))||IsBlank(Trim(leaderName.Text))||IsBlank(Trim(leaderDesignation.Text)), DisplayMode.Disabled, DisplayMode.Edit)
+                    =If(IsBlank(Trim(labelleaderDesignation.Text)) || (IsBlank(Trim(Substitute(Substitute(Substitute(testimonialDesc.HtmlText,"&nbsp;",""),"<p>",""),"</p>",""))))||IsBlank(Trim(customerName.Text))||IsBlank(Trim(leaderName.Text))||IsBlank(Trim(leaderDesignation.Text))||IsBlank(AddMediaButton2.Media), DisplayMode.Disabled, DisplayMode.Edit)
                     
                 Fill: =RGBA(0, 51, 102, 1)
                 FontWeight: =FontWeight.Semibold
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 OnSelect: |-
-                    =Patch(Testimonials,Defaults(Testimonials),{'Leader Name':leaderName.Text,'Leader designation':leaderDesignation.Text,Customer:customerName.Text,Description:testimonialDesc.HtmlText,Community:communityDropdown.Selected.Communities,Title:""});
+                    =Patch(Testimonials,Defaults(Testimonials),{'Leader Name':leaderName.Text,'Leader designation':leaderDesignation.Text,Customer:customerName.Text,Description:testimonialDesc.HtmlText,Community:communityDropdown.Selected.Communities,Screenshot:emailScreenshot.Image,Title:""});
                     Reset(customerName);
                     Reset(leaderName);
                     Reset(leaderDesignation);
                     Reset(testimonialDesc);
                     Reset(communityDropdown);
+                    Reset(AddMediaButton2);
                     Navigate(allTestimonial);
                 Size: =15
                 Text: ="Submit"
@@ -221,7 +222,7 @@
                 Y: =60
                 ZIndex: =13
 
-                UploadedImage2 As image:
+                emailScreenshot As image:
                     BorderColor: =RGBA(0, 89, 178, 1)
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
