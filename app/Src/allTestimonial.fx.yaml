@@ -41,10 +41,10 @@
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Height: =362
                 Items: =Testimonials
-                TemplateSize: =400
-                Width: =930
-                X: =128
-                Y: =146
+                TemplateSize: =520
+                Width: =1050
+                X: =206
+                Y: =132
                 ZIndex: =1
 
                 Label74 As label:
@@ -55,14 +55,15 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Customer
-                    X: =98
-                    Y: =44
+                    X: =198
+                    Y: =21
                     ZIndex: =1
 
                 HtmlText1 As htmlViewer:
-                    Height: =70
+                    Height: =174
                     HtmlText: =ThisItem.Description
                     OnSelect: =Select(Parent)
+                    Width: =400
                     X: =73
                     Y: =113
                     ZIndex: =2
