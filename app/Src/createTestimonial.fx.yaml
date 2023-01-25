@@ -59,7 +59,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 FocusedBorderThickness: =4
-                HintText: ="Enter customer name"
+                HintText: ="Enter name of the company or organization"
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
@@ -75,7 +75,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FontWeight: =FontWeight.Semibold
                 Size: =13
-                Text: ="Leader Name"
+                Text: ="Customer Name"
                 X: =40
                 Y: =110
                 ZIndex: =3
@@ -105,7 +105,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FontWeight: =FontWeight.Semibold
                 Size: =13
-                Text: ="Designation of Leader"
+                Text: ="Designation of Customer"
                 Width: =203
                 X: =748
                 Y: =110
@@ -120,7 +120,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 FocusedBorderThickness: =4
-                HintText: ="Enter designation of the leader"
+                HintText: ="Enter designation of the customer"
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
