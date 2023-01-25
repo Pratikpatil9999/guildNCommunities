@@ -46,7 +46,7 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =If(addedFile && !IsBlank(Trim(TextInput12.Text)) && IsBlank(LookUp(caseStudy,Title=TextInput12.Text)),
+            =If(addedCaseStudy && !IsBlank(Trim(TextInput12.Text)) && IsBlank(LookUp(caseStudy,Title=TextInput12.Text)),
             
             Patch(caseStudy, Defaults(caseStudy), {
                 Title: TextInput12.Text,
@@ -151,9 +151,9 @@
                             NotificationType.Error
                         );
                         Reset(Self),
-                        Set(addedFile,true);
+                        Set(addedCaseStudy,true);
                     );
-                OnRemoveFile: =Set(addedFile,true);
+                OnRemoveFile: =Set(addedCaseStudy,false);
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
