@@ -183,7 +183,7 @@
                 Size: =13
                 Text: ="Community"
                 Width: =180
-                X: =759
+                X: =748
                 Y: =207
                 ZIndex: =11
 
@@ -214,16 +214,57 @@
                 Y: =207
                 ZIndex: =12
 
+            AddMediaWithImage2 As group:
+                Height: =5
+                Width: =5
+                X: =60
+                Y: =60
+                ZIndex: =13
+
+                UploadedImage2 As image:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =178
+                    Image: =If(IsBlank(AddMediaButton2.Media), SampleImage, AddMediaButton2.Media)
+                    ImagePosition: =ImagePosition.Fill
+                    Width: =328
+                    X: =951
+                    Y: =280
+                    ZIndex: =14
+
+                AddMediaButton2 As addMedia:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =178
+                    Size: =13
+                    Text: ="Add a screenshot of a mail."
+                    X: =951
+                    Y: =280
+                    ZIndex: =15
+
+            Label79 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Size: =13
+                Text: ="Attachment"
+                X: =748
+                Y: =319
+                ZIndex: =16
+
     Icon50 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(250, 250, 250, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
-        Height: =50
+        Height: =40
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(allTestimonial)
-        Width: =50
-        X: =25
-        Y: =12
+        Width: =40
+        X: =17
+        Y: =24
         ZIndex: =4
 

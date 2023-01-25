@@ -8797,6 +8797,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.AddMediaButton2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "createTestimonial.Canvas16.DataCard56.AddMediaButton2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "createTestimonial",
+                "type": "createTestimonial.Canvas16.DataCard56.AddMediaButton2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "shareIt.Icon24.AccessibleLabel"
                 }
               ],
