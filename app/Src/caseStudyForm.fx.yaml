@@ -2,7 +2,7 @@
     Fill: =RGBA(232, 232, 232, 1)
     OnVisible: |-
         =ClearCollect(UserCommunities,Filter(User,Email=User().Email));
-        Set(addedFile,false);
+        Set(addedCaseStudy,false);
         ResetForm(Form8);
         Reset(TextInput12);
 

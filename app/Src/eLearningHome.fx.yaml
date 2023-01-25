@@ -338,3 +338,14 @@
         Y: =136
         ZIndex: =10
 
+    Icon51_1 As icon.Home:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(250, 250, 250, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Home);
+        X: =126
+        Y: =17
+        ZIndex: =11
+
