@@ -348,31 +348,6 @@
         Y: =9
         ZIndex: =33
 
-    Button18_27 As button:
-        Align: =Align.Left
-        BorderThickness: =0
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(241, 241, 241, 1)
-        FontWeight: =FontWeight.Semibold
-        Height: =39
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-        OnSelect: =Navigate(newsLetterHome);
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="Newsletter"
-        Visible: =DropDown
-        Width: =140
-        X: =209
-        Y: =255
-        ZIndex: =34
-
     Label59 As label:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 51, 102, 1)
