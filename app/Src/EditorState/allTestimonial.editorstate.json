@@ -93,7 +93,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Canvas15",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -619,7 +619,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon36",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1600,7 +1600,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplatePhoneLblAppName.ID%",
       "Name": "LblAppName15",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

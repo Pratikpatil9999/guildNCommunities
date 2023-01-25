@@ -509,8 +509,8 @@
         OnSelect: =Set(DropDownDashboard,!DropDownDashboard)
         Visible: =If(!IsBlank(LookUp(User, Email=User().Email && Role="admin")), true, false)
         Width: =20
-        X: =730
-        Y: =32
+        X: =722
+        Y: =30
         ZIndex: =24
 
     Rectangle2_7 As rectangle:

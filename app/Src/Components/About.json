@@ -124,7 +124,7 @@
         "Name": "TextInput1",
         "Parent": "About",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1365,
+        "PublishOrderIndex": 1362,
         "Rules": [
           {
             "Category": "Data",
@@ -425,7 +425,7 @@
         "Name": "Icon2",
         "Parent": "About",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1366,
+        "PublishOrderIndex": 1363,
         "Rules": [
           {
             "Category": "Design",
@@ -694,7 +694,7 @@
         "Name": "TextInput3",
         "Parent": "About",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1367,
+        "PublishOrderIndex": 1364,
         "Rules": [
           {
             "Category": "Data",
@@ -995,7 +995,7 @@
         "Name": "Image5",
         "Parent": "About",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1368,
+        "PublishOrderIndex": 1365,
         "Rules": [
           {
             "Category": "Data",
@@ -1301,7 +1301,7 @@
         "Name": "TextInput2",
         "Parent": "About",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1369,
+        "PublishOrderIndex": 1366,
         "Rules": [
           {
             "Category": "Data",
@@ -1658,7 +1658,7 @@
         "Name": "Button3",
         "Parent": "About",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1370,
+        "PublishOrderIndex": 1367,
         "Rules": [
           {
             "Category": "Data",
@@ -1991,7 +1991,7 @@
         "Name": "Label2",
         "Parent": "About",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1371,
+        "PublishOrderIndex": 1368,
         "Rules": [
           {
             "Category": "Data",
