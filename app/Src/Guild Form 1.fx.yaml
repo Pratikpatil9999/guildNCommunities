@@ -1698,7 +1698,8 @@
                 Icon: =Icon.ChevronRight
                 OnSelect: |-
                     =Select(Parent);
-                    Set(TR22, ThisItem.Mail);
+                    If(TB1=ThisItem.Mail,Notify("Torch Setters can't be same"),Set(TR22,ThisItem.Mail));
+                    //Set(TR22, ThisItem.Mail);
                     Set(popUpImage,false);
                     Reset(TextInput15_2);
                     Set(popUpImageTR2,false);
@@ -1851,7 +1852,8 @@
                 Icon: =Icon.ChevronRight
                 OnSelect: |-
                     =Select(Parent);
-                    Set(TR33, ThisItem.Mail);
+                    //Set(TR33, ThisItem.Mail);
+                    If(TR22=ThisItem.Mail,Notify("Torch Setters can't be same"),Set(TR33,ThisItem.Mail));
                     Set(popUpImage,false);
                     Reset(TextInput15_3);
                     Set(popUpImageTR3,false);
@@ -2003,6 +2005,7 @@
                 Icon: =Icon.ChevronRight
                 OnSelect: |-
                     =Select(Parent);
+                    
                     Set(TP11, ThisItem.Mail);
                     Set(popUpImage,false);
                     Reset(TextInput15_4);
@@ -2165,7 +2168,8 @@
                 Icon: =Icon.ChevronRight
                 OnSelect: |-
                     =Select(Parent);
-                    Set(TP22, ThisItem.Mail);
+                    ///Set(TP22, ThisItem.Mail);
+                    If(TP11=ThisItem.Mail, Notify("Choose a different polestar"), Set(TP22, ThisItem.Mail));
                     Set(popUpImage,false);
                     Set(popUpImageP2,false);
                     Reset(TextInput15_5);
@@ -2469,7 +2473,8 @@
                 Icon: =Icon.ChevronRight
                 OnSelect: |-
                     =Select(Parent);
-                    Set(TB222, ThisItem.Mail);
+                    //Set(TB222, ThisItem.Mail);
+                    If(TB111=ThisItem.Mail,Notify("Torch Bearers can't be same"),Set(TB222,ThisItem.Mail));
                     Set(popUpImage,false);
                     Reset(TextInput15_7);
                     Set(popUpImageTB2,false);
@@ -2674,7 +2679,8 @@
                 Icon: =Icon.ChevronRight
                 OnSelect: |-
                     =Select(Parent);
-                    Set(TB333, ThisItem.Mail);
+                    //Set(TB333, ThisItem.Mail);
+                    If(TB222=ThisItem.Mail,Notify("Torch Setters can't be same"),Set(TB333,ThisItem.Mail));
                     Set(popUpImage,false);
                     Reset(TextInput15_8);
                         Set(popUpImageTB3,false);
