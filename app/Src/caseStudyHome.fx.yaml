@@ -21,6 +21,7 @@
             {subject:"New Case Study Added"}
         ), false);
         Set(isCaseStudyAdded, false);
+        Set(DropDown,false);
 
     "Gallery10 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -671,7 +672,7 @@
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 51, 102, 1)
+        Fill: =RGBA(0, 46, 92, 1)
         FontWeight: =FontWeight.Semibold
         Height: =41
         HoverColor: =RGBA(255, 255, 255, 1)
