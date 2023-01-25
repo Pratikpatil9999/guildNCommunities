@@ -72,7 +72,7 @@
         "Name": "Image2",
         "Parent": "HomeImage",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1365,
+        "PublishOrderIndex": 1364,
         "Rules": [
           {
             "Category": "Data",
