@@ -81,6 +81,18 @@
                     Y: =91
                     ZIndex: =3
 
+                Label78 As label:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =$"{ThisItem.'Leader Name'},{ThisItem.'Leader designation'}"
+                    Width: =207
+                    X: =232
+                    Y: =287
+                    ZIndex: =4
+
     Icon36 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(250, 250, 250, 1)
