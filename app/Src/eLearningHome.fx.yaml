@@ -7,7 +7,7 @@
         If(currCommunity="All",Set(eLearningList,eLearning),Set(eLearningList,Filter(eLearning,Community=currCommunity)));
         Set(openPopup,false);
         //Set(DropDown,false);
-        
+        Set(DropDown,false);
         
         If(isELearningAdded, 
         
