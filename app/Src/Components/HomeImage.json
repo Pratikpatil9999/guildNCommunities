@@ -72,7 +72,7 @@
         "Name": "Image2",
         "Parent": "HomeImage",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1362,
+        "PublishOrderIndex": 1365,
         "Rules": [
           {
             "Category": "Data",
@@ -288,7 +288,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638102209348802540",
+    "LastModifiedTimestamp": "638102249688744086",
     "Name": "HomeImage",
     "Rules": [
       {
@@ -347,7 +347,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638102209348802540",
+  "LastModifiedTimestamp": "638102249688744086",
   "Name": "923589e162334ba3ac42a49447cb3358",
   "OverridableProperties": {},
   "Version": "638059165900806792"

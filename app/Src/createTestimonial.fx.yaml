@@ -45,7 +45,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FontWeight: =FontWeight.Semibold
                 Size: =13
-                Text: ="Cutomer Name"
+                Text: ="Organization Name"
                 X: =40
                 Y: =40
                 ZIndex: =1
@@ -136,7 +136,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FontWeight: =FontWeight.Semibold
                 Size: =13
-                Text: ="Description"
+                Text: ="Testimonial Description"
                 X: =40
                 Y: =207
                 ZIndex: =7
@@ -175,6 +175,18 @@
                 Y: =560
                 ZIndex: =9
 
+            Label72 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Size: =13
+                Text: ="Community"
+                Width: =180
+                X: =759
+                Y: =207
+                ZIndex: =11
+
             communityDropdown As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 ChevronBackground: =RGBA(0, 51, 102, 1)
@@ -200,19 +212,7 @@
                 Size: =13
                 X: =951
                 Y: =207
-                ZIndex: =10
-
-            Label72 As label:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Size: =13
-                Text: ="Select Community"
-                Width: =180
-                X: =759
-                Y: =207
-                ZIndex: =11
+                ZIndex: =12
 
     Icon50 As icon.BackArrow:
         BorderColor: =RGBA(0, 89, 178, 1)
