@@ -39,12 +39,12 @@
 
             Gallery16 As gallery.galleryHorizontal:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                Height: =362
+                Height: =329
                 Items: =Testimonials
                 TemplateSize: =520
                 Width: =1050
-                X: =206
-                Y: =132
+                X: =166
+                Y: =122
                 ZIndex: =1
 
                 Label74 As label:
@@ -65,20 +65,20 @@
                     OnSelect: =Select(Parent)
                     Width: =400
                     X: =73
-                    Y: =113
+                    Y: =68
                     ZIndex: =2
 
                 Label75 As label:
                     BorderColor: =RGBA(0, 89, 178, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
-                    Height: =22
+                    Height: =45
                     OnSelect: =Select(Parent)
-                    Size: =20
+                    Size: =30
                     Text: ="❝"
-                    Width: =25
+                    Width: =50
                     X: =48
-                    Y: =91
+                    Y: =68
                     ZIndex: =3
 
                 Label78 As label:
@@ -89,8 +89,8 @@
                     Size: =13
                     Text: =$"{ThisItem.'Leader Name'},{ThisItem.'Leader designation'}"
                     Width: =207
-                    X: =232
-                    Y: =287
+                    X: =247
+                    Y: =242
                     ZIndex: =4
 
     Icon36 As icon.BackArrow:
