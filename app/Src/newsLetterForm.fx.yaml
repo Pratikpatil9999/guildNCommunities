@@ -17,7 +17,7 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Semibold
         Height: =88
-        Size: =26
+        Size: =22
         Text: ="NewsLetter Form"
         Width: =Parent.Width
         ZIndex: =2
@@ -236,7 +236,7 @@
         OnSelect: |-
             =ResetForm(Form1);
             Navigate(newsLetterHome);
-        X: =26
+        X: =48
         Y: =12
         ZIndex: =4
 

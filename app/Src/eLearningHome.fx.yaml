@@ -99,7 +99,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =20
-            Text: =ThisItem.Title
+            Text: =Proper(ThisItem.Title)
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Image2_4.Width - 104
             X: =132
@@ -560,7 +560,7 @@
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(241, 241, 241, 1)
         FontWeight: =FontWeight.Semibold
-        Height: =42
+        Height: =35
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
         OnSelect: =Navigate(whitePaperHome);
@@ -571,7 +571,7 @@
         Size: =15
         Text: ="White Papers"
         Visible: =DropDown
-        Width: =127
+        Width: =141
         X: =196
         Y: =297
         ZIndex: =27
@@ -679,16 +679,15 @@
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(0, 46, 92, 1)
         FontWeight: =FontWeight.Semibold
-        Height: =52
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: =Navigate(eLearningForm);
         Size: =18
-        Text: ="Add Learnings"
+        Text: ="Add E-Learning"
         Visible: |
             =If(CountRows(UserCommunities) = 0, false, true)
         Width: =192
-        X: =1103
-        Y: =9
+        X: =1080
+        Y: =20
         ZIndex: =32
 
