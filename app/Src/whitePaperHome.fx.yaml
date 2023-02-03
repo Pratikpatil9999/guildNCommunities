@@ -20,6 +20,7 @@
             {subject:"New White Paper Added"}
         ), false);
         Set(isWhitePaperAdded, false);
+        Set(DropDown,false);
 
     "Gallery1_1 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(0, 18, 107, 1)
