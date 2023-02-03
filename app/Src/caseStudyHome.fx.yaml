@@ -661,7 +661,7 @@
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =15
-        Text: ="Newsletter"
+        Text: ="Newsletters"
         Visible: =DropDown
         Width: =140
         X: =178
@@ -681,7 +681,7 @@
         Size: =18
         Text: ="Add Case Study"
         Width: =216
-        X: =1132
+        X: =1109
         Y: =14
         ZIndex: =31
 

@@ -19745,6 +19745,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.guild_product"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.guild_product",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "guild_product",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.Harshal Jawale"
                 }
               ],
