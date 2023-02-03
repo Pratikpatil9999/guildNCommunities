@@ -17,9 +17,10 @@
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Semibold
         Height: =88
-        Size: =18
-        Text: ="Form"
+        Size: =22
+        Text: ="Case Study Form"
         Width: =Parent.Width
         ZIndex: =2
 
