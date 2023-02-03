@@ -222,9 +222,11 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =152
-                Image: |
+                Image: |+
                     =//data.TorchImage1
-                    If(!IsBlank(data.'Torch Bearers1'),Office365Users.UserPhotoV2("mani.bobba@zensar.com"),placeholder)
+                    If(!IsBlank(data.'Torch Bearers1'),Office365Users.UserPhotoV2(data.'Torch Bearers1'),placeholder)
+                    
+                    
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -317,7 +319,7 @@
                 Image: =Torchbearer
                 Width: =183
                 X: =161
-                Y: =83
+                Y: =84
                 ZIndex: =21
 
             Image19_1 As image:
@@ -341,6 +343,17 @@
                 X: =571
                 Y: =68
                 ZIndex: =23
+
+            Label81 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =68
+                Size: =13
+                Text: =data.'Torch Bearers1'
+                Width: =270
+                X: =232
+                ZIndex: =24
 
         DataCard25 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
