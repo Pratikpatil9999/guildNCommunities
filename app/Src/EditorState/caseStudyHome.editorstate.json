@@ -4034,23 +4034,9 @@
         "Align",
         "VerticalAlign",
         "X",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Y",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Y",
         "Width",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Height",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Height",
         "ZIndex",
         "RadiusTopLeft",
         "RadiusTopRight",
@@ -5433,35 +5419,14 @@
         "Font",
         "FontWeight",
         "X",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Y",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Width",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Y",
+        "Width",
         "Height",
         "DisplayMode",
         "ZIndex",
         "BorderThickness",
         "FocusedBorderThickness",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Size",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Size",
         "Italic",
         "Underline",
         "Strikethrough",
@@ -5789,14 +5754,7 @@
         "X",
         "Y",
         "Width",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Height",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Height",
         "ZIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate13",
@@ -6391,30 +6349,9 @@
         "HoverFill",
         "DisplayMode",
         "X",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Y",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Width",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Height",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Y",
+        "Width",
+        "Height",
         "BorderStyle",
         "BorderColor",
         "DisabledBorderColor",
@@ -6590,38 +6527,10 @@
         "PressedFill",
         "HoverFill",
         "DisplayMode",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "X",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Y",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Width",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Height",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "X",
+        "Y",
+        "Width",
+        "Height",
         "BorderStyle",
         "BorderColor",
         "DisabledBorderColor",
@@ -7007,14 +6916,7 @@
         "ImageRotation",
         "X",
         "Y",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Width",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Width",
         "Height",
         "Fill",
         "DisabledFill",
@@ -7247,14 +7149,7 @@
         "Align",
         "VerticalAlign",
         "X",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Y",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Y",
         "Width",
         "Height",
         "DisplayMode",
@@ -7288,7 +7183,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label2_3",
-      "ParentIndex": 16,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7564,7 +7459,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label2_8",
-      "ParentIndex": 15,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8410,30 +8305,9 @@
         "HoverFill",
         "DisplayMode",
         "X",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Y",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Width",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Height",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Y",
+        "Width",
+        "Height",
         "BorderStyle",
         "BorderColor",
         "DisabledBorderColor",
@@ -8469,7 +8343,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGalleryNextIcon.ID%",
       "Name": "NextArrow3",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9180,7 +9054,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGallerySubtitle.ID%",
       "Name": "Subtitle5",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9406,14 +9280,7 @@
         "RadiusBottomRight",
         "BorderThickness",
         "FocusedBorderThickness",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Size",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Size",
         "Italic",
         "Underline",
         "Strikethrough",
@@ -9636,14 +9503,7 @@
       "ControlPropertyState": [
         "Live",
         "Overflow",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "ThisItem.Name",
-          "InvariantPropertyName": "Text",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Text",
         "Role",
         "Color",
         "DisabledColor",

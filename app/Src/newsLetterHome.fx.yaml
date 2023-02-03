@@ -681,7 +681,7 @@
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =15
-        Text: ="Newsletter"
+        Text: ="Newsletters"
         Visible: =DropDown
         Width: =140
         X: =178
