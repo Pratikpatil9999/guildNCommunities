@@ -224,7 +224,7 @@
                 Height: =152
                 Image: |
                     =//data.TorchImage1
-                    If(!IsBlank(data.'Torch Bearers1'),Office365Users.UserPhotoV2(data.'Torch Bearers1'),placeholder)
+                    If(!IsBlank(data.'Torch Bearers1'),Office365Users.UserPhotoV2("mani.bobba@zensar.com"),placeholder)
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
