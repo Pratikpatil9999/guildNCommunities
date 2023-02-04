@@ -539,6 +539,7 @@
             RadiusTopRight: =0
             Size: =15
             Text: ="Dashboard"
+            Visible: =If(!IsBlank(LookUp(User, Email=User().Email && Role="admin")), true, false)
             Width: =167
             X: =590
             ZIndex: =39
