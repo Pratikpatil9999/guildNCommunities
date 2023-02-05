@@ -16835,49 +16835,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "detailBlog.Container5_1.Icon5_4.AccessibleLabel"
+                  "fullyQualifiedName": "detailBlog.Container7.Icon51.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "detailBlog.Container5_1.Icon5_4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "detailBlog",
-                "type": "detailBlog.Container5_1.Icon5_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "detailBlog.Container5_1.Icon5_4.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "detailBlog.Container5_1.Icon5_4.TabIndex",
+                  "fullyQualifiedName": "detailBlog.Container7.Icon51.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "detailBlog",
-                "type": "detailBlog.Container5_1.Icon5_4"
+                "type": "detailBlog.Container7.Icon51"
               }
             }
           ],
@@ -16895,19 +16865,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "detailBlog.Container5_1.UserName_2.AccessibleLabel"
+                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard58.Gallery22.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "detailBlog.Container5_1.UserName_2.AccessibleLabel",
+                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard58.Gallery22.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "detailBlog",
-                "type": "detailBlog.Container5_1.UserName_2"
+                "type": "detailBlog.Canvas7.DataCard58.Gallery22"
               }
             }
           ],
@@ -16925,49 +16895,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "detailBlog.Container5_1.Gallery18_2.AccessibleLabel"
+                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard58.Gallery22.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "detailBlog.Container5_1.Gallery18_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "detailBlog",
-                "type": "detailBlog.Container5_1.Gallery18_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "detailBlog.Container5_1.Gallery18_2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "detailBlog.Container5_1.Gallery18_2.TabIndex",
+                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard58.Gallery22.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "detailBlog",
-                "type": "detailBlog.Container5_1.Gallery18_2"
+                "type": "detailBlog.Canvas7.DataCard58.Gallery22"
               }
             }
           ],
@@ -17255,19 +17195,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard20.Gallery7.AccessibleLabel"
+                  "fullyQualifiedName": "detailBlog.Container7.Gallery23.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard20.Gallery7.AccessibleLabel",
+                  "fullyQualifiedName": "detailBlog.Container7.Gallery23.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "detailBlog",
-                "type": "detailBlog.Canvas7.DataCard20.Gallery7"
+                "type": "detailBlog.Container7.Gallery23"
               }
             }
           ],
@@ -17285,19 +17225,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard20.Gallery7.TabIndex"
+                  "fullyQualifiedName": "detailBlog.Container7.UserName_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard20.Gallery7.TabIndex",
+                  "fullyQualifiedName": "detailBlog.Container7.UserName_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "TabIndex",
+                "member": "AccessibleLabel",
                 "module": "detailBlog",
-                "type": "detailBlog.Canvas7.DataCard20.Gallery7"
+                "type": "detailBlog.Container7.UserName_2"
               }
             }
           ],
@@ -17307,8 +17247,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 9
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -19398,6 +19338,66 @@
                 "member": "TabIndex",
                 "module": "eventFeedback",
                 "type": "eventFeedback.Icon42"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "detailBlog.Container7.Icon51.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "detailBlog.Container7.Icon51.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "detailBlog",
+                "type": "detailBlog.Container7.Icon51"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "detailBlog.Container7.Gallery23.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "detailBlog.Container7.Gallery23.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "detailBlog",
+                "type": "detailBlog.Container7.Gallery23"
               }
             }
           ],
