@@ -68,18 +68,17 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Lato Black'
             FontWeight: =FontWeight.Semibold
-            Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
             Size: =24
-            Text: =ThisItem.Title
+            Text: =Left(ThisItem.Title,65)
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - Image15.Width - 104
+            Width: =926
             X: =Image15.X + Image15.Width + 24
-            Y: =44
+            Y: =47
             ZIndex: =2
 
         Subtitle2 As label:
