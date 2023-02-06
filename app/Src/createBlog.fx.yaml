@@ -83,7 +83,7 @@
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
-                MaxLength: =50
+                MaxLength: =200
                 OnChange: =Set(T1,true);
                 OnSelect: =Set(T1,true);
                 Size: =13
