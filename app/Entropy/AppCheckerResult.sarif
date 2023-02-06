@@ -20315,6 +20315,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "newsLetterForm.Button28.DisplayMode"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newsLetterForm.Button28.DisplayMode",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "DisplayMode",
+                "module": "newsLetterForm",
+                "type": "newsLetterForm.Button28"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 14
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Profile.Canvas10.DataCard29.Legend6_1.Items"
                 }
               ],
