@@ -80,7 +80,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.Author.DisplayName
+            Text: =ThisItem.'Created By'.DisplayName
             VerticalAlign: =VerticalAlign.Top
             Width: =862
             X: =132
@@ -112,7 +112,7 @@
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =40
             Icon: =Icon.ChevronRight
-            OnSelect: =Download(First(ThisItem.'{Attachments}').AbsoluteUri);
+            OnSelect: =Download(First(ThisItem.Attachments).AbsoluteUri);
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10
@@ -141,7 +141,7 @@
             Height: =40
             Icon: =Icon.Download
             OnSelect: |
-                =Download(First(ThisItem.'{Attachments}').AbsoluteUri);
+                =Download(First(ThisItem.Attachments).AbsoluteUri);
             Width: =40
             X: =928
             Y: =50
@@ -159,7 +159,7 @@
                 Set(openPopup,true);
             Visible: |-
                 =If(
-                    !IsBlank(LookUp(whitepapers, 'Modified By'.Email=User().Email && Name=ThisItem.'{Name}')) ||
+                    !IsBlank(LookUp(whitepapers, 'Modified By'.Email=User().Email && Name=ThisItem.Name)) ||
                     !IsBlank(LookUp(User, Email=User().Email && Communities=ThisItem.Community && Role="admin")),
                     true,
                     false
@@ -250,8 +250,8 @@
             OnSelect: |-
                 =If(
                     LookUp('Event Track Details', ID=currPaper.EventId).Status = "Approved",
-                    Patch(User, LookUp(User, Email=currPaper.Author.Email && Communities=currPaper.Community), {
-                        Points: LookUp(User, Email=currPaper.Author.Email && Communities=currPaper.Community).Points - 25
+                    Patch(User, LookUp(User, Email=currPaper.'Created By'.Email && Communities=currPaper.Community), {
+                        Points: LookUp(User, Email=currPaper.'Created By'.Email && Communities=currPaper.Community).Points - 25
                     });
                     Remove('Event Track Details',LookUp('Event Track Details', ID=currPaper.EventId));
                     ,
