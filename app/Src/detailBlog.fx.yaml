@@ -49,7 +49,6 @@
 
             HtmlText2 As htmlViewer:
                 AutoHeight: =true
-                Font: =Font.Lato
                 Height: =2965
                 HtmlText: =data.Content
                 Size: =18
