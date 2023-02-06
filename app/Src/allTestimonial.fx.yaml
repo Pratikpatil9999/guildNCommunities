@@ -23,7 +23,7 @@
 
             Gallery16 As gallery.galleryHorizontal:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                Height: =444
+                Height: =393
                 Items: |+
                     =If(
                         Dropdown1_2.Selected.Communities = "All", 
@@ -50,7 +50,7 @@
                     ZIndex: =1
 
                 HtmlText1 As htmlViewer:
-                    Height: =284
+                    Height: =206
                     HtmlText: =ThisItem.Description
                     OnSelect: =Select(Parent)
                     Size: =16
@@ -84,7 +84,7 @@
                     Text: =$"{ThisItem.'Leader Name'}"
                     Width: =207
                     X: =268
-                    Y: =352
+                    Y: =234
                     ZIndex: =4
 
                 Label80 As label:
@@ -100,7 +100,7 @@
                     Text: =$"{ThisItem.'Leader designation'}"
                     Width: =222
                     X: =268
-                    Y: =374
+                    Y: =289
                     ZIndex: =5
 
             Dropdown1_2 As dropdown:
