@@ -192,7 +192,7 @@
                         Reset(Self),
                         Set(addedFile,true);
                     );
-                OnRemoveFile: =Set(addedFile,true);
+                OnRemoveFile: =Set(addedFile,false);
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5

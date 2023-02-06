@@ -194,7 +194,7 @@
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =146
+                Y: =156
                 ZIndex: =2
 
             ErrorMessage28 As label:

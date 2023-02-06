@@ -150,7 +150,7 @@
         OnSelect: |
             =ResetForm(Form1_3);
             Navigate(eLearningHome);
-        X: =26
+        X: =48
         Y: =12
         ZIndex: =4
 
