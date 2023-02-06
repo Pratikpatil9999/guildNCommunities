@@ -306,7 +306,6 @@
         OnSelect: |-
             =Reset(title);
             Reset(content);
-            Reset(screenshotPicture);
             Navigate(allBlogs)
         Tooltip: ="Back"
         Width: =40
