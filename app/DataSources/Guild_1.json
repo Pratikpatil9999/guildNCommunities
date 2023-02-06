@@ -45,12 +45,12 @@
       "ShortDescription": "Short Description",
       "Team": "Team",
       "Title": "Title",
-      "TorchBearers": "Torch Bearers1",
-      "TorchBearers2": "Torch Bearers2",
-      "TorchBearers3": "Torch Bearers3",
-      "TrendSetters": "Trend Setters1",
-      "TrendSetters2": "Trend Setters2",
-      "TrendSetters3": "Trend Setters3"
+      "TorchBearers": "Torch Bearer1",
+      "TorchBearers2": "Torch Bearer2",
+      "TorchBearers3": "Torch Bearer3",
+      "TrendSetters": "Trend Setter1",
+      "TrendSetters2": "Trend Setter2",
+      "TrendSetters3": "Trend Setter3"
     },
     "DatasetName": "https://zensar.sharepoint.com/sites/GuildsandCommunities",
     "EncodeDataset": true,

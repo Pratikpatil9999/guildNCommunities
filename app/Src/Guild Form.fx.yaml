@@ -407,7 +407,7 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TorchBearers"
-            Default: =ThisItem.'Torch Bearers1'
+            Default: =ThisItem.'Torch Bearer1'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"TorchBearers")
             Fill: =RGBA(0, 0, 0, 0)
@@ -508,7 +508,7 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TorchBearers2"
-            Default: =ThisItem.'Torch Bearers2'
+            Default: =ThisItem.'Torch Bearer2'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"TorchBearers2")
             Fill: =RGBA(0, 0, 0, 0)
@@ -596,7 +596,7 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TorchBearers3"
-            Default: =ThisItem.'Torch Bearers3'
+            Default: =ThisItem.'Torch Bearer3'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"TorchBearers3")
             Fill: =RGBA(0, 0, 0, 0)
@@ -934,7 +934,7 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TrendSetters"
-            Default: =ThisItem.'Trend Setters1'
+            Default: =ThisItem.'Trend Setter1'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"TrendSetters")
             Fill: =RGBA(0, 0, 0, 0)
@@ -1022,7 +1022,7 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TrendSetters2"
-            Default: =ThisItem.'Trend Setters2'
+            Default: =ThisItem.'Trend Setter2'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"TrendSetters2")
             Fill: =RGBA(0, 0, 0, 0)
@@ -1110,7 +1110,7 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TrendSetters3"
-            Default: =ThisItem.'Trend Setters3'
+            Default: =ThisItem.'Trend Setter3'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"TrendSetters3")
             Fill: =RGBA(0, 0, 0, 0)
