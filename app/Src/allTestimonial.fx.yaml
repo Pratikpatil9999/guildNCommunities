@@ -50,7 +50,7 @@
                     ZIndex: =1
 
                 HtmlText1 As htmlViewer:
-                    Height: =206
+                    Height: =181
                     HtmlText: =ThisItem.Description
                     OnSelect: =Select(Parent)
                     Size: =16
@@ -84,7 +84,7 @@
                     Text: =$"{ThisItem.'Leader Name'}"
                     Width: =207
                     X: =268
-                    Y: =234
+                    Y: =249
                     ZIndex: =4
 
                 Label80 As label:
@@ -100,7 +100,7 @@
                     Text: =$"{ThisItem.'Leader designation'}"
                     Width: =222
                     X: =268
-                    Y: =289
+                    Y: =274
                     ZIndex: =5
 
             Dropdown1_2 As dropdown:
