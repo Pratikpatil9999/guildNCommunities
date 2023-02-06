@@ -135,7 +135,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Height: =DataCardKey48.Height
                 Size: =13
-                Text: ="*"
+                Text: =""
                 Width: =30
                 Wrap: =false
                 Y: =DataCardKey48.Y
@@ -183,7 +183,7 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         Height: =43
         Size: =13
-        Text: =" *   Community"
+        Text: ="     Community"
         Width: =155
         X: =467
         Y: =287
@@ -254,7 +254,7 @@
         Color: =RGBA(0, 89, 178, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Size: =13
-        Text: =" *   Title"
+        Text: ="     Title"
         X: =472
         Y: =206
         ZIndex: =9
