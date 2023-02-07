@@ -350,7 +350,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Height: =68
                 Size: =13
-                Text: =data.'Torch Bearer1'
+                Text: =""
                 Width: =270
                 X: =232
                 ZIndex: =24
