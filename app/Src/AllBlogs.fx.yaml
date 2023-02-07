@@ -170,7 +170,7 @@
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: =Navigate(createBlog)
         Size: =15
-        Text: ="Write Blog"
+        Text: ="Create Your Blog"
         Width: =190
         X: =1109
         Y: =130
