@@ -1878,7 +1878,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "Launch(\"https://zensar-my.sharepoint.com.office.prod.zensar.myshn.net/:b:/p/s_shendkar/EfkBcG8LHz9OualJEsR0U2YB-M8GXecvd6mCyPqs86FAUA?e=dnCDhn\")",
+            "InvariantScript": "Launch(\"hhttps://zensar-my.sharepoint.com.office.prod.zensar.myshn.net/:b:/p/s_shendkar/EfkBcG8LHz9OualJEsR0U2YB-M8GXecvd6mCyPqs86FAUA\")",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -2267,7 +2267,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638113639509044293",
+    "LastModifiedTimestamp": "638113652776532371",
     "Name": "About",
     "Rules": [
       {
@@ -2326,7 +2326,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638113639509044293",
+  "LastModifiedTimestamp": "638113652776532371",
   "Name": "f519ced9060241e4947d9bc36dcc7f62",
   "OverridableProperties": {},
   "Version": "638059174131501999"
