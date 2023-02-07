@@ -1305,7 +1305,7 @@
         "Rules": [
           {
             "Category": "Data",
-            "InvariantScript": "\"Zensar Guild is a closed group of specialists, leaders of a domain, technology or role. Entry to this group is restricted to certain members, who share some pre-defined credential, only! They are the Torch bearers and Trend setters of their respective areas  \r\n\r\nCommunity is an open group, sharing a common interest in a specific domain, technology or a role. Anybody who is interested in the domain/ technology, that the community is formed for, can be a part of it\"",
+            "InvariantScript": "\"Zensar Guild is a closed group of specialists, leaders of a domain, technology or role. Entry to this group is restricted to certain members, who share some pre-defined credential, only! They are the Torch bearers and Trend setters of their respective areas  \n\nCommunity is an open group, sharing a common interest in a specific domain, technology or a role. Anybody who is interested in the domain/ technology, that the community is formed for, can be a part of it\"",
             "Property": "Default",
             "RuleProviderType": "Unknown"
           },
@@ -1878,7 +1878,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "Launch(\"https://zensar-my.sharepoint.com/personal/s_shendkar_zensar_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fs%5Fshendkar%5Fzensar%5Fcom%2FDocuments%2FG%26C%20microsite%20%281%29%2Epdf&parent=%2Fpersonal%2Fs%5Fshendkar%5Fzensar%5Fcom%2FDocuments&ct=1670489457516&or=Teams%2DHL&ga=1\")",
+            "InvariantScript": "Launch(\"https://zensar-my.sharepoint.com.office.prod.zensar.myshn.net/:b:/p/s_shendkar/EfkBcG8LHz9OualJEsR0U2YB-M8GXecvd6mCyPqs86FAUA?e=dnCDhn\")",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -2267,7 +2267,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638113466362830413",
+    "LastModifiedTimestamp": "638113551778999830",
     "Name": "About",
     "Rules": [
       {
@@ -2326,7 +2326,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638113466362830413",
+  "LastModifiedTimestamp": "638113551778999830",
   "Name": "f519ced9060241e4947d9bc36dcc7f62",
   "OverridableProperties": {},
   "Version": "638059174131501999"
