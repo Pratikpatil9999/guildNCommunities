@@ -18,7 +18,7 @@
         FontWeight: =FontWeight.Semibold
         Height: =88
         Size: =22
-        Text: ="NewsLetter Form"
+        Text: ="Publish A NewsLetter"
         Width: =Parent.Width
         ZIndex: =2
 

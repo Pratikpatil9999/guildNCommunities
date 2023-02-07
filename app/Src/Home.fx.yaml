@@ -230,6 +230,7 @@
                 Height: =40
                 Icon: =Icon.AddUser
                 OnSelect: =Navigate('Guild Form 1')
+                Tooltip: ="create guild"
                 Visible: =If(!IsBlank(LookUp(User, Email=User().Email && Role="admin")), true, false)
                 Width: =31
                 X: =850

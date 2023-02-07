@@ -20,7 +20,7 @@
         FontWeight: =FontWeight.Semibold
         Height: =88
         Size: =22
-        Text: ="Case Study Form"
+        Text: ="Publish A Case Study"
         Width: =Parent.Width
         ZIndex: =2
 

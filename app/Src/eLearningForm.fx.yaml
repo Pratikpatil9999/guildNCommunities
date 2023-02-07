@@ -20,7 +20,7 @@
         FontWeight: =FontWeight.Semibold
         Height: =88
         Size: =22
-        Text: ="E-Learning Form"
+        Text: ="Add E-Learning"
         Width: =Parent.Width
         ZIndex: =2
 
