@@ -15,7 +15,7 @@
         FontWeight: =FontWeight.Semibold
         Height: =88
         Size: =18
-        Text: ="Write a new blog"
+        Text: ="Write A New Blog"
         Width: =Parent.Width
         ZIndex: =2
 
