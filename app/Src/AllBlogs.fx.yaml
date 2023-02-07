@@ -710,6 +710,7 @@
         Height: =19
         Icon: =Icon.ChevronDown
         OnSelect: =Set(DropDownDashboard,!DropDownDashboard)
+        Visible: =If(!IsBlank(LookUp(User, Email=User().Email && Role="admin")), true, false)
         Width: =20
         X: =731
         Y: =28
