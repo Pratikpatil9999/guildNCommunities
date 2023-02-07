@@ -48,17 +48,17 @@
                     Text: =ThisItem.Customer
                     Width: =252
                     X: =138
-                    Y: =21
+                    Y: =6
                     ZIndex: =1
 
                 HtmlText1 As htmlViewer:
-                    Height: =288
+                    Height: =287
                     HtmlText: =ThisItem.Description
                     OnSelect: =Select(Parent)
                     Size: =18
                     Width: =492
-                    X: =28
-                    Y: =88
+                    X: =18
+                    Y: =73
                     ZIndex: =2
 
                 Label75 As label:
@@ -85,15 +85,15 @@
                     Size: =13
                     Text: =$"{ThisItem.'Leader Name'}"
                     Width: =207
-                    X: =279
-                    Y: =376
+                    X: =286
+                    Y: =391
                     ZIndex: =4
 
                 Label80 As label:
                     BorderColor: =RGBA(0, 89, 178, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
-                    Height: =50
+                    Height: =35
                     OnSelect: =Select(Parent)
                     PaddingBottom: =0
                     PaddingLeft: =0
@@ -101,9 +101,22 @@
                     Size: =13
                     Text: =$"{ThisItem.'Leader designation'}"
                     Width: =222
-                    X: =279
-                    Y: =401
+                    X: =286
+                    Y: =416
                     ZIndex: =5
+
+                Label82 As label:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =42
+                    OnSelect: =Select(Parent)
+                    Size: =40
+                    Text: ="❞"
+                    Width: =42
+                    X: =451
+                    Y: =367
+                    ZIndex: =6
 
             Dropdown1_2 As dropdown:
                 BorderColor: =RGBA(0, 89, 178, 1)
