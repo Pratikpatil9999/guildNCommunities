@@ -63,7 +63,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =20
-            Text: =ThisItem.Title
+            Text: =Proper(ThisItem.Name)
             VerticalAlign: =VerticalAlign.Top
             Width: =862
             X: =132
