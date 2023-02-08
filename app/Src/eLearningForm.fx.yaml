@@ -28,7 +28,7 @@
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =eLearning
         Height: =216
-        Item: =Defaults(newsletters)
+        Item: =Defaults(eLearning)
         NumberOfColumns: =1
         Width: =432
         X: =467
