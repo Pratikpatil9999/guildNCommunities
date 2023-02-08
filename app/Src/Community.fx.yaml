@@ -224,7 +224,7 @@
                 Height: =152
                 Image: |+
                     =//data.TorchImage1
-                    If(!IsBlank(data.'Torch Bearer1'),Office365Users.UserPhotoV2(data.'Torch Bearer1'),placeholder)
+                    If(data.'Torch Bearer1'="Torch Bearer 1",placeholder, Office365Users.UserPhotoV2(data.'Torch Bearer1'))
                     
                     
                 RadiusBottomLeft: =90
@@ -241,7 +241,11 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =148
-                Image: =Office365Users.UserPhotoV2(data.'Torch Bearer3')
+                Image: |+
+                    =//data.TorchImage1
+                    If(data.'Torch Bearer3'="Torch Bearer 3",placeholder, Office365Users.UserPhotoV2(data.'Torch Bearer3'))
+                    
+                    
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -258,8 +262,11 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =140
-                Image: |
-                    =If(!IsBlank(data.'Torch Bearer2'),Office365Users.UserPhotoV2(data.'Torch Bearer2'),placeholder)
+                Image: |+
+                    =//data.TorchImage1
+                    If(data.'Torch Bearer2'="Torch Bearer 2",placeholder, Office365Users.UserPhotoV2(data.'Torch Bearer2'))
+                    
+                    
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -277,7 +284,7 @@
                 Height: =42
                 Size: =15
                 Text: |-
-                    =If(!IsBlank(data.'Torch Bearer2'),First(Office365Users.SearchUser({searchTerm:data.'Torch Bearer2'})).DisplayName,"")
+                    =If((data.'Torch Bearer2')= "Torch Bearer 2","Torch Bearer 2",First(Office365Users.SearchUser({searchTerm:data.'Torch Bearer1'})).DisplayName)
                 Width: =248
                 X: =589
                 Y: =269
@@ -291,7 +298,7 @@
                 Height: =42
                 Size: =15
                 Text: |-
-                    =If(!IsBlank(data.'Torch Bearer3'),First(Office365Users.SearchUser({searchTerm:data.'Torch Bearer3'})).DisplayName,"")
+                    =If((data.'Torch Bearer3')= "Torch Bearer 3","Torch Bearer 3",First(Office365Users.SearchUser({searchTerm:data.'Torch Bearer1'})).DisplayName)
                 Width: =186
                 X: =998
                 Y: =269
@@ -305,7 +312,7 @@
                 Height: =42
                 Size: =15
                 Text: |-
-                    =If(!IsBlank(data.'Torch Bearer1'),First(Office365Users.SearchUser({searchTerm:data.'Torch Bearer1'})).DisplayName,"")
+                    =If((data.'Torch Bearer1')= "Torch Bearer 1","Torch Bearer 1",First(Office365Users.SearchUser({searchTerm:data.'Torch Bearer1'})).DisplayName)
                 Width: =248
                 X: =162
                 Y: =268
@@ -372,7 +379,7 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =172
                 Image: |
-                    =If(!IsBlank(data.'Trend Setter1'),Office365Users.UserPhotoV2(data.'Trend Setter1'),placeholder)
+                    =If((data.'Trend Setter1')="Trend Setter 1",placeholder,Office365Users.UserPhotoV2(data.'Trend Setter3'))
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -388,7 +395,7 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =182
                 Image: |
-                    =If(!IsBlank(data.'Trend Setter2'),Office365Users.UserPhotoV2(data.'Trend Setter2'),placeholder)
+                    =If((data.'Trend Setter2')="Trend Setter 2",placeholder,Office365Users.UserPhotoV2(data.'Trend Setter3'))
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -403,7 +410,7 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =172
                 Image: |
-                    =If(!IsBlank(data.'Trend Setter3'),Office365Users.UserPhotoV2(data.'Trend Setter3'),placeholder)
+                    =If((data.'Trend Setter3')="Trend Setter 3",placeholder,Office365Users.UserPhotoV2(data.'Trend Setter3'))
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -419,7 +426,7 @@
                 FontWeight: =FontWeight.Semibold
                 Size: =15
                 Text: |-
-                    =If(!IsBlank(data.'Trend Setter1'),First(Office365Users.SearchUser({searchTerm:data.'Trend Setter1'})).DisplayName,"")
+                    =If((data.'Trend Setter1')="Trend Setter 1","Trend Setter 1",First(Office365Users.SearchUser({searchTerm:data.'Trend Setter1'})).DisplayName)
                 Width: =165
                 X: =159
                 Y: =199
@@ -433,7 +440,7 @@
                 Height: =62
                 Size: =15
                 Text: |-
-                    =If(!IsBlank(data.'Trend Setter3'),First(Office365Users.SearchUser({searchTerm:data.'Trend Setter3'})).DisplayName,"")
+                    =If((data.'Trend Setter3')="Trend Setter 3","Trend Setter 3",First(Office365Users.SearchUser({searchTerm:data.'Trend Setter1'})).DisplayName)
                 Width: =195
                 X: =1013
                 Y: =182
@@ -447,7 +454,7 @@
                 Height: =85
                 Size: =15
                 Text: |-
-                    =If(!IsBlank(data.'Trend Setter2'),First(Office365Users.SearchUser({searchTerm:data.'Trend Setter2'})).DisplayName,"")
+                    =If((data.'Trend Setter2')="Trend Setter 2","Trend Setter 2",First(Office365Users.SearchUser({searchTerm:data.'Trend Setter1'})).DisplayName)
                 Width: =162
                 X: =589
                 Y: =186
