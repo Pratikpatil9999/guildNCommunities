@@ -1,0 +1,242 @@
+Screen3 As screen:
+    Fill: =RGBA(232, 232, 232, 1)
+    OnVisible: |-
+        =Clear(BlogCollection);
+        ForAll(Testimonials,
+        Collect(
+        BlogCollection,
+        Last(
+        FirstN(
+        AddColumns(Testimonials,
+        "RowNumber", 
+        CountRows(BlogCollection) + 1
+        ),
+        CountRows(BlogCollection) + 1
+        )
+        )
+        )
+        );
+        UpdateContext({varRowsPerPage: 1}); 
+        UpdateContext(
+        {
+        varCurrentPage: 1,
+        varTotalPages: RoundUp(
+        CountRows(BlogCollection) / varRowsPerPage,
+        0
+        )
+        }
+        );
+        UpdateContext({Timer2: true});
+        Set(varStartTimer,true);
+
+    Timer2 As timer:
+        AutoStart: =true
+        Duration: =4000
+        Fill: =RGBA(0, 51, 102, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnTimerEnd: |-
+            =If(
+            varCurrentPage = varTotalPages,
+            UpdateContext({varCurrentPage: 1}),
+            UpdateContext({varCurrentPage: varCurrentPage + 1})
+            )
+        Repeat: =true
+        Start: =varStartTimer
+        X: =1118
+        Y: =434
+        ZIndex: =2
+
+    Icon53 As icon.NextArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisplayMode: =If(varCurrentPage=varTotalPages,DisplayMode.Disabled, DisplayMode.Edit)
+        Icon: =Icon.NextArrow
+        OnSelect: |-
+            =UpdateContext({varCurrentPage:varCurrentPage + 1})
+        X: =1008
+        Y: =652
+        ZIndex: =3
+
+    Icon53_1 As icon.NextArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisplayMode: =If(varCurrentPage=1,DisplayMode.Disabled, DisplayMode.Edit)
+        Icon: =Icon.BackArrow
+        OnSelect: |
+            =UpdateContext({varCurrentPage:varCurrentPage - 1})
+        X: =360
+        Y: =652
+        ZIndex: =4
+
+    Icon53_2 As icon.NextArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.View
+        OnSelect: |
+            =UpdateContext({varStartTimer:!varStartTimer})
+        X: =658
+        Y: =652
+        ZIndex: =5
+
+    autoscroll As gallery.galleryHorizontal:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Height: =371
+        Items: |+
+            =Filter(
+            BlogCollection,
+            RowNumber <= (varRowsPerPage * varCurrentPage) && RowNumber > (varRowsPerPage * varCurrentPage) - varRowsPerPage)
+            
+        TemplateSize: =612
+        Width: =632
+        X: =328
+        Y: =114
+        ZIndex: =6
+
+        Label74_1 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =67
+            OnSelect: =Select(Parent)
+            Size: =23
+            Text: =ThisItem.Customer
+            Width: =252
+            X: =138
+            Y: =6
+            ZIndex: =1
+
+        HtmlText1_1 As htmlViewer:
+            Height: =264
+            HtmlText: =ThisItem.Description
+            OnSelect: =Select(Parent)
+            Size: =18
+            Width: =579
+            X: =18
+            Y: =73
+            ZIndex: =2
+
+        Label75_1 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =60
+            OnSelect: =Select(Parent)
+            Size: =40
+            Text: ="❝"
+            Width: =50
+            X: =8
+            Y: =50
+            ZIndex: =3
+
+        Label78_1 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingTop: =0
+            Size: =13
+            Text: =$"{ThisItem.'Leader Name'}"
+            Width: =207
+            X: =286
+            Y: =391
+            ZIndex: =4
+
+        Label80_1 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =35
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingTop: =0
+            Size: =13
+            Text: =$"{ThisItem.'Leader designation'}"
+            Width: =222
+            X: =286
+            Y: =416
+            ZIndex: =5
+
+        Label82_1 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =42
+            OnSelect: =Select(Parent)
+            Size: =40
+            Text: ="❞"
+            Width: =42
+            X: =451
+            Y: =367
+            ZIndex: =6
+
+        Label83 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.'Leader Name'
+            X: =410
+            Y: =308
+            ZIndex: =7
+
+    Dropdown1_3 As dropdown:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Items: =UserCommunity1
+        OnChange: |-
+            =Clear(BlogCollection);
+            ForAll(Testimonials,
+            Collect(
+            BlogCollection,
+            Last(
+            FirstN(
+            AddColumns(Testimonials,
+            "RowNumber", 
+            CountRows(BlogCollection) + 1
+            ),
+            CountRows(BlogCollection) + 1
+            )
+            )
+            )
+            );
+            UpdateContext({varRowsPerPage: 1}); 
+            UpdateContext(
+            {
+            varCurrentPage: 1,
+            varTotalPages: RoundUp(
+            CountRows(BlogCollection) / varRowsPerPage,
+            0
+            )
+            }
+            );
+            UpdateContext({Timer2: true});
+            Set(varStartTimer,true);
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        Size: =13
+        X: =1008
+        Y: =74
+        ZIndex: =7
+
