@@ -249,6 +249,7 @@
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisplayMode: =If(User().FullName = ThisItem.MemberName, Disabled, Edit)
                     Fill: =RGBA(54, 176, 75, 1)
                     Font: =Font.'Lato Black'
                     FontWeight: =FontWeight.Semibold
@@ -268,7 +269,7 @@
                         ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending" && Teams_Channel_Name=Dropdown6.Selected.Communities));
                         
                         Patch(User, LookUp(User, Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name), {
-                            Points: LookUp(User, Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name).Points + ThisItem.Count
+                            Points: LookUp(User, Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name).Points + Value(ThisItem.Count)
                         });
                         
                         Office365Outlook.SendEmail(LookUp(User, Name=ThisItem.MemberName).Email , "Activity Approved", ("Your Activity has been approved for the event " & ThisItem.Title & " dated on " & ThisItem.'DateofEvent ' & ". You have been awarded " & ThisItem.Count & " points."));
@@ -290,6 +291,7 @@
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisplayMode: =If(User().FullName = ThisItem.MemberName, Disabled, Edit)
                     Fill: =RGBA(217, 26, 45, 1)
                     Font: =Font.'Lato Black'
                     FontWeight: =FontWeight.Semibold
