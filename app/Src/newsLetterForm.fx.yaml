@@ -287,11 +287,26 @@
         OnSelect: |
             =
             If(addedNewsLetter&& !IsBlank(Trim(DataCardValue3.Text)) && IsBlank(LookUp(newsletters,Title=DataCardValue3.Text)),
+            
+            Patch('Event Track Details',Defaults('Event Track Details'), {
+                Title: "Creating Newsletter",
+                Category: "Expert Engagement",
+                Count: 25,
+                comments: "Search For Title: '" & DataCardValue3.Text & "' in the news letter section!",
+                'DateofEvent ': Now(),
+                EventId: LookUp(Points, Title="Creating blogs").ID,
+                MemberName: User().FullName,
+                Status: "Pending",
+                Teams_Channel_Name: Dropdown8.Selected.Communities
+            });
+            
             Patch(newsletters, Defaults(newsletters),{
                 Title: DataCardValue3.Text,
-                Community:Dropdown8.Selected.Communities
+                Community:Dropdown8.Selected.Communities,
+                EventId: Last('Event Track Details').ID
             }, Form1.Updates);
-            Set(currentGuildName, LookUp(Community_1, Title=Dropdown1_4.Selected.Communities).Guild);
+            
+            Set(currentGuildName, LookUp(Community_1, Title=Dropdown8.Selected.Communities).Guild);
             Set(currentGuild, LookUp(Guild, Title=currentGuildName));
             
             Set(channelId,First(Split(currentGuild.Channel,"\")).Result);
