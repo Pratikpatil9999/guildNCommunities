@@ -126,7 +126,7 @@ About As CanvasComponent:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =Launch("hhttps://zensar-my.sharepoint.com.office.prod.zensar.myshn.net/:b:/p/s_shendkar/EfkBcG8LHz9OualJEsR0U2YB-M8GXecvd6mCyPqs86FAUA")
+            =Launch("https://zensar-my.sharepoint.com/:b:/p/s_shendkar/EfkBcG8LHz9OualJEsR0U2YB-M8GXecvd6mCyPqs86FAUA?e=qFyYBW")
         Size: =15
         Text: ="Know More"
         X: =1192
