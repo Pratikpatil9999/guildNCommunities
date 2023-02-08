@@ -222,7 +222,7 @@
     Container12_2 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(167, 182, 203, 1)
         Visible: =openPopup
-        Width: =458
+        Width: =488
         X: =450
         Y: =283
         ZIndex: =7
@@ -234,7 +234,7 @@
             FontWeight: =FontWeight.Bold
             Height: =55
             Size: =18
-            Text: ="Do You Want To Delete A NewsLetter"
+            Text: ="Do You Want To Delete A Learning"
             Width: =461
             X: =24
             Y: =45
