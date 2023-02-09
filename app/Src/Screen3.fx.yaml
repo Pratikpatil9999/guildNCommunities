@@ -203,12 +203,20 @@ Screen3 As screen:
         Items: =UserCommunity1
         OnChange: |-
             =Clear(BlogCollection);
-            ForAll(Testimonials,
+            ForAll(If(
+                Dropdown1_3.Selected.Communities = "All", 
+              Sort( Testimonials,ID,Descending),
+              Sort( Filter(Testimonials, Community=Dropdown1_3.Selected.Communities),ID,Descending)
+            ),
             Collect(
             BlogCollection,
             Last(
             FirstN(
-            AddColumns(Testimonials,
+            AddColumns(If(
+                Dropdown1_3.Selected.Communities = "All", 
+              Sort( Testimonials,ID,Descending),
+              Sort( Filter(Testimonials, Community=Dropdown1_3.Selected.Communities),ID,Descending)
+            ),
             "RowNumber", 
             CountRows(BlogCollection) + 1
             ),
