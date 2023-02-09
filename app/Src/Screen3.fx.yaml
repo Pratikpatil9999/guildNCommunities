@@ -43,6 +43,7 @@ Screen3 As screen:
             )
         Repeat: =true
         Start: =varStartTimer
+        Visible: =false
         X: =1118
         Y: =434
         ZIndex: =2
@@ -53,11 +54,13 @@ Screen3 As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         DisplayMode: =If(varCurrentPage=varTotalPages,DisplayMode.Disabled, DisplayMode.Edit)
+        Height: =40
         Icon: =Icon.NextArrow
         OnSelect: |-
             =UpdateContext({varCurrentPage:varCurrentPage + 1})
-        X: =1008
-        Y: =652
+        Width: =40
+        X: =983
+        Y: =568
         ZIndex: =3
 
     Icon53_1 As icon.NextArrow:
@@ -66,11 +69,13 @@ Screen3 As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         DisplayMode: =If(varCurrentPage=1,DisplayMode.Disabled, DisplayMode.Edit)
+        Height: =40
         Icon: =Icon.BackArrow
         OnSelect: |
             =UpdateContext({varCurrentPage:varCurrentPage - 1})
-        X: =360
-        Y: =652
+        Width: =40
+        X: =370
+        Y: =568
         ZIndex: =4
 
     Icon53_2 As icon.NextArrow:
@@ -78,11 +83,13 @@ Screen3 As screen:
         Color: =RGBA(0, 89, 178, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =40
         Icon: =Icon.View
         OnSelect: |
-            =UpdateContext({varStartTimer:!varStartTimer})
-        X: =658
-        Y: =652
+            =Set(varStartTimer,!varStartTimer)
+        Width: =40
+        X: =668
+        Y: =568
         ZIndex: =5
 
     autoscroll As gallery.galleryHorizontal:
