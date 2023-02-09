@@ -1,6 +1,10 @@
 "allTestimonial As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =RGBA(232, 232, 232, 1)
-    OnVisible: =Set(DropDown,false);
+    OnVisible: |-
+        =ClearCollect(UserCommunity, ShowColumns(Filter(User, Name=User().FullName), "Communities"));
+        ClearCollect(UserCommunity1, { Communities: "All" }, UserCommunity);
+        SortByColumns(UserCommunity, "Communities", Ascending);
+        Set(DropDown,false);
 
     Canvas15 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
