@@ -284,7 +284,7 @@
                 Height: =42
                 Size: =15
                 Text: |-
-                    =If((data.'Torch Bearer2')= "Torch Bearer 2","Torch Bearer 2",First(Office365Users.SearchUser({searchTerm:data.'Torch Bearer1'})).DisplayName)
+                    =If((data.'Torch Bearer2')= "Torch Bearer 2","Torch Bearer 2",First(Office365Users.SearchUser({searchTerm:data.'Torch Bearer2'})).DisplayName)
                 Width: =248
                 X: =589
                 Y: =269
@@ -298,7 +298,7 @@
                 Height: =42
                 Size: =15
                 Text: |-
-                    =If((data.'Torch Bearer3')= "Torch Bearer 3","Torch Bearer 3",First(Office365Users.SearchUser({searchTerm:data.'Torch Bearer1'})).DisplayName)
+                    =If((data.'Torch Bearer3')= "Torch Bearer 3","Torch Bearer 3",First(Office365Users.SearchUser({searchTerm:data.'Torch Bearer3'})).DisplayName)
                 Width: =186
                 X: =998
                 Y: =269
