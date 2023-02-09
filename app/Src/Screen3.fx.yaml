@@ -59,8 +59,8 @@ Screen3 As screen:
         OnSelect: |-
             =UpdateContext({varCurrentPage:varCurrentPage + 1})
         Width: =40
-        X: =983
-        Y: =568
+        X: =984
+        Y: =620
         ZIndex: =3
 
     Icon53_1 As icon.NextArrow:
@@ -74,8 +74,8 @@ Screen3 As screen:
         OnSelect: |
             =UpdateContext({varCurrentPage:varCurrentPage - 1})
         Width: =40
-        X: =370
-        Y: =568
+        X: =362
+        Y: =620
         ZIndex: =4
 
     Icon53_2 As icon.NextArrow:
@@ -88,13 +88,13 @@ Screen3 As screen:
         OnSelect: |
             =Set(varStartTimer,!varStartTimer)
         Width: =40
-        X: =668
-        Y: =568
+        X: =660
+        Y: =620
         ZIndex: =5
 
     autoscroll As gallery.galleryHorizontal:
         BorderColor: =RGBA(0, 89, 178, 1)
-        Height: =371
+        Height: =483
         Items: |+
             =Filter(
             BlogCollection,
@@ -102,21 +102,22 @@ Screen3 As screen:
             
         TemplateSize: =612
         Width: =632
-        X: =328
-        Y: =114
+        X: =385
+        Y: =101
         ZIndex: =6
 
         Label74_1 As label:
+            Align: =Align.Center
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Bold
-            Height: =67
+            Height: =44
             OnSelect: =Select(Parent)
             Size: =23
             Text: =ThisItem.Customer
-            Width: =252
-            X: =138
+            Width: =497
+            X: =58
             Y: =6
             ZIndex: =1
 
@@ -154,7 +155,7 @@ Screen3 As screen:
             Size: =13
             Text: =$"{ThisItem.'Leader Name'}"
             Width: =207
-            X: =286
+            X: =375
             Y: =391
             ZIndex: =4
 
@@ -170,8 +171,8 @@ Screen3 As screen:
             Size: =13
             Text: =$"{ThisItem.'Leader designation'}"
             Width: =222
-            X: =286
-            Y: =416
+            X: =375
+            Y: =431
             ZIndex: =5
 
         Label82_1 As label:
@@ -183,20 +184,9 @@ Screen3 As screen:
             Size: =40
             Text: ="❞"
             Width: =42
-            X: =451
-            Y: =367
+            X: =555
+            Y: =349
             ZIndex: =6
-
-        Label83 As label:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.'Leader Name'
-            X: =410
-            Y: =308
-            ZIndex: =7
 
     Dropdown1_3 As dropdown:
         BorderColor: =RGBA(0, 89, 178, 1)
