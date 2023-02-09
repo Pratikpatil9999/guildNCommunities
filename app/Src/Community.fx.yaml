@@ -517,7 +517,7 @@
                     BorderColor: =RGBA(0, 0, 0, 1)
                     BorderThickness: =2
                     Fill: =RGBA(0, 0, 0, 0)
-                    Height: =340
+                    Height: =354
                     OnSelect: =Select(Parent)
                     Width: =308
                     X: =16
@@ -534,8 +534,8 @@
                     OnSelect: =Select(Parent)
                     Size: =20
                     Text: =ThisItem.Title
-                    Width: =250
-                    X: =40
+                    Width: =274
+                    X: =33
                     Y: =29
                     ZIndex: =2
 
