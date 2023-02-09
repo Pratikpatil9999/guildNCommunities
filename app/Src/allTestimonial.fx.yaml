@@ -38,6 +38,7 @@
                 ZIndex: =1
 
                 Label74 As label:
+                    Align: =Align.Center
                     BorderColor: =RGBA(0, 89, 178, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
