@@ -19,6 +19,7 @@
             },
             {subject:"New White Paper Added"}
         ), false);
+        
         Set(isWhitePaperAdded, false);
         Set(DropDown,false);
 
