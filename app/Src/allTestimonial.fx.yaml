@@ -42,13 +42,12 @@
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     FontWeight: =FontWeight.Bold
-                    Height: =67
+                    Height: =50
                     OnSelect: =Select(Parent)
                     Size: =23
                     Text: =ThisItem.Customer
-                    Width: =252
-                    X: =138
-                    Y: =6
+                    Width: =409
+                    X: =59
                     ZIndex: =1
 
                 HtmlText1 As htmlViewer:
