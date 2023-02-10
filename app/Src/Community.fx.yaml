@@ -90,7 +90,7 @@
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FontWeight: =FontWeight.Bold
-                Height: =41
+                Height: =54
                 Size: =23
                 Text: |-
                     =
@@ -99,8 +99,8 @@
                     //First(Office365Users.(data.Polestar1).DisplayName)
                     //Office365Users.SearchUser({searchTerm:data.Polestar1})
                 Width: =345
-                X: =365
-                Y: =41
+                X: =264
+                Y: =40
                 ZIndex: =8
 
             Label29 As label:
@@ -109,15 +109,15 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.Lato
                 FontWeight: =FontWeight.Semibold
-                Height: =182
+                Height: =81
                 LineHeight: =1.5
                 Size: =15
                 Text: |
                     =//data.Designation1
                     First(Office365Users.SearchUser({searchTerm:data.Polestar1})).JobTitle
                 Width: =359
-                X: =351
-                Y: =28
+                X: =264
+                Y: =94
                 ZIndex: =11
 
             Image9 As image:
@@ -140,13 +140,13 @@
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FontWeight: =FontWeight.Bold
-                Height: =41
+                Height: =70
                 Size: =23
                 Text: |-
                     =If(!IsBlank(data.Polestar2) ,First(Office365Users.SearchUser({searchTerm:data.Polestar2})).DisplayName
                     , "")
-                Width: =294
-                X: =940
+                Width: =381
+                X: =929
                 Y: =56
                 ZIndex: =13
 
@@ -181,15 +181,15 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.Lato
                 FontWeight: =FontWeight.Semibold
-                Height: =182
+                Height: =49
                 LineHeight: =1.5
                 Size: =15
                 Text: |-
                     =If(!IsBlank(data.Polestar2) ,First(Office365Users.SearchUser({searchTerm:data.Polestar2})).JobTitle
                     , "")
                 Width: =359
-                X: =940
-                Y: =28
+                X: =929
+                Y: =126
                 ZIndex: =16
 
         DataCard23 As dataCard.blankCard:

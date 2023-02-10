@@ -3466,7 +3466,7 @@
                     If(RS22=ThisItem.Mail,Notify("Torch Bearers can't be same"),Set(RS33,ThisItem.Mail));
                     Set(popUpImage,false);
                     Reset(TextInput15_11);
-                    Set(popUpImageRS33,false);
+                    Set(popUpImageRS3,false);
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
