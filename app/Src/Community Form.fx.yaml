@@ -279,7 +279,7 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="KnowMore"
-            Default: =ThisItem.'Know More'
+            Default: =ThisItem.'Know More ( Url )'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Community_1],DataSourceInfo.DisplayName,"KnowMore")
             Fill: =RGBA(0, 0, 0, 0)
@@ -365,7 +365,7 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="CommunityDetails"
-            Default: =ThisItem.'Community Details'
+            Default: =ThisItem.'Community Details ( Url )'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Community_1],DataSourceInfo.DisplayName,"CommunityDetails")
             Fill: =RGBA(0, 0, 0, 0)

@@ -591,7 +591,7 @@
                     Icon: =Icon.Link
                     OnSelect: |-
                         =Select(Parent);
-                        Launch(ThisItem.'Community Details')
+                        Launch(ThisItem.'Community Details ( Url )')
                     Width: =35
                     X: =278
                     Y: =167
@@ -604,7 +604,7 @@
                     DisabledColor: =RGBA(244, 244, 244, 1)
                     Height: =45
                     Icon: =Icon.Link
-                    OnSelect: =Launch(ThisItem.'Know More');
+                    OnSelect: =Launch(ThisItem.'Know More ( Url )');
                     Width: =35
                     X: =278
                     Y: =235
