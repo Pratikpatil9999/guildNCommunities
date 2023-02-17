@@ -247,7 +247,17 @@
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Red, -20%)
             OnSelect: |-
-                =Remove(newsletters,currNewsLetter);
+                =If(
+                    LookUp('Event Track Details', ID=currNewsLetter.EventId).Status = "Approved",
+                    Patch(User, LookUp(User, Email=currNewsLetter.'Created By'.Email && Communities=currNewsLetter.Community), {
+                        Points: LookUp(User, Email=currNewsLetter.'Created By'.Email && Communities=currNewsLetter.Community).Points - 25
+                    });
+                    Remove('Event Track Details',LookUp('Event Track Details', ID=currNewsLetter.EventId));
+                    ,
+                    Remove('Event Track Details',LookUp('Event Track Details', ID=currNewsLetter.EventId));
+                );
+                
+                Remove(newsletters,currNewsLetter);
                 Notify( "NewsLetter Deleted Successfully" , NotificationType.Success, 1000);
                 Set(openPopup,false);
                 Refresh(newsletters);

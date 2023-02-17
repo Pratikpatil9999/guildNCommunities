@@ -615,7 +615,19 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =Remove(Blog,LookUp(Blog,ID=data.ID));
+            =If(
+                LookUp('Event Track Details', ID=data.EventId).Status = "Approved",
+                Patch(User, LookUp(User, Email=data.'Created By'.Email && Communities=data.Tags), {
+                    Points: LookUp(User, Email=data.'Created By'.Email && Communities=data.Tags).Points - 25
+                });
+                Remove('Event Track Details',LookUp('Event Track Details', ID=data.EventId));
+                ,
+                Remove('Event Track Details',LookUp('Event Track Details', ID=data.EventId));
+            );
+            
+            
+            
+            Remove(Blog,LookUp(Blog,ID=data.ID));
             Set(openPopup,false);
             Navigate(allBlogs);
             Notify("Blog has deleted successfully");

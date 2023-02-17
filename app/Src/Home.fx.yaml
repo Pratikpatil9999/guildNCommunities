@@ -1391,7 +1391,7 @@
         Size: =15
         Text: ="FAQs"
         Width: =125
-        X: =343
+        X: =348
         ZIndex: =49
 
     Button20_14 As button:
