@@ -420,10 +420,10 @@
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 Fill: =RGBA(232, 232, 232, 1)
-                Height: =345
+                Height: =347
                 StreamUrl: |-
                     ="https://web.microsoftstream.com/video/fdd13419-9043-40c5-b116-fec2809a8d44"
-                Width: =586
+                Width: =633
                 X: =6
                 Y: =8
                 ZIndex: =1
