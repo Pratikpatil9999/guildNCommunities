@@ -200,7 +200,7 @@
                     Icon: =Icon.NextArrow
                     OnSelect: |-
                         =Select(Parent);
-                        Navigate(Community,Cover,{data:galPaginated.Selected});
+                        Navigate(Community,ScreenTransition.Cover,{data:galPaginated.Selected});
                     Width: =44
                     X: =181
                     Y: =499
@@ -262,7 +262,7 @@
             btnPrevious As arrow.backArrow:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisplayMode: =If(varPageNumber = 1, Disabled, Edit)
+                DisplayMode: =If(varPageNumber = 1, DisplayMode.Disabled, DisplayMode.Edit)
                 Fill: =RGBA(0, 51, 102, 1)
                 OnSelect: |-
                     =UpdateContext({varPageNumber: varPageNumber - 1})
@@ -285,7 +285,7 @@
             btnNext As arrow:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisplayMode: =If(ddPageSize.SelectedText.Value*varPageNumber<CountRows(Guild), DisplayMode.Edit,Disabled)
+                DisplayMode: =If(ddPageSize.SelectedText.Value*varPageNumber<CountRows(Guild), DisplayMode.Edit,DisplayMode.Disabled)
                 Fill: =RGBA(0, 51, 102, 1)
                 OnSelect: |-
                     =UpdateContext({varPageNumber: varPageNumber + 1})
@@ -573,6 +573,22 @@
                 Width: =359
                 X: =484
                 Y: =12
+                ZIndex: =2
+
+        DataCard20 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =1366
+            X: =0
+            Y: =8
+            ZIndex: =13
+
+            Component1_1 As Component1:
+
+            Footer_1 As Footer:
                 ZIndex: =2
 
     Timer1 As timer:

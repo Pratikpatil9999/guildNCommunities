@@ -1,6 +1,6 @@
 "AddActivity As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |-
-        =ClearCollect(EventCategories, Distinct(Points, Category));
+        =ClearCollect(EventCategories, ForAll(Distinct(Points, Category), {Result: ThisRecord.Value}));
         ClearCollect(EventTitle, Filter(Points, Category=Dropdown2_2.Selected.Result));
         Set(points, Text(LookUp(EventTitle, Title=Dropdown3.Selected.Title).Points));
         ClearCollect(Hours, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);

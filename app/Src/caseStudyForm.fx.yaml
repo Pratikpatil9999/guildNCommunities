@@ -42,7 +42,7 @@
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =If(addedCaseStudy&& !IsBlank(Trim(TextInput12)),Edit,Disabled)
+        DisplayMode: =If(addedCaseStudy&& !IsBlank(Trim(TextInput12)),DisplayMode.Edit,DisplayMode.Disabled)
         Fill: =RGBA(0, 51, 102, 1)
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
@@ -59,8 +59,8 @@
             Set(currentGuildName, LookUp(Community_1, Title=Dropdown12.Selected.Communities).Guild);
             Set(currentGuild, LookUp(Guild, Title=currentGuildName));
             
-            Set(channelId,First(Split(currentGuild.Channel,"\")).Result);
-            Set(teamId,First(Split(currentGuild.Team,"\")).Result);
+            Set(channelId,First(ForAll(Split(currentGuild.Channel,"\"), {Result: ThisRecord.Value})).Result);
+            Set(teamId,First(ForAll(Split(currentGuild.Team,"\"), {Result: ThisRecord.Value})).Result);
             
             
             ResetForm(Form8);

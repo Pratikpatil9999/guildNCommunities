@@ -38,7 +38,7 @@
                             SortByColumns(
                                 Filter('Event Track Details', Status="Approved"),
                                 "Created",
-                                Ascending
+                                SortOrder.Ascending
                             ),
                             "dates",
                             Text(
@@ -76,7 +76,7 @@
                 }
             )
         );
-        ClearCollect(TopFiveUsers, FirstN(SortByColumns(Ranks, "No", Ascending), 5));
+        ClearCollect(TopFiveUsers, FirstN(SortByColumns(Ranks, "No", SortOrder.Ascending), 5));
         /*ClearCollect(TopFiveCommunities, FirstN(SortByColumns(Community_1, "Blogs", Descending), 5));*/
         ClearCollect(TopFiveCommunities, FirstN(SortByColumns(DropColumns(
                 AddColumns(
@@ -84,8 +84,8 @@
                     "Count",CountRows(GroupedItems)
                 ),
             "GroupedItems"
-        ),"Count", Descending),3));
-        ClearCollect(TopFivePopularGuilds, FirstN(SortByColumns(Guild, "Members", Descending), 3));
+        ),"Count", SortOrder.Descending),3));
+        ClearCollect(TopFivePopularGuilds, FirstN(SortByColumns(Guild, "Members", SortOrder.Descending), 3));
         Set(DropDownDashboard,false);
         
         /*ClearCollect(CommunityEvents, Filter('Event Track Details', Teams_Channel_Name=Dropdown7.Selected.Title && Status="Approved"));
@@ -249,7 +249,7 @@
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    DisplayMode: =If(User().FullName = ThisItem.MemberName, Disabled, Edit)
+                    DisplayMode: =If(User().FullName = ThisItem.MemberName, DisplayMode.Disabled, DisplayMode.Edit)
                     Fill: =RGBA(54, 176, 75, 1)
                     Font: =Font.'Lato Black'
                     FontWeight: =FontWeight.Semibold
@@ -291,7 +291,7 @@
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    DisplayMode: =If(User().FullName = ThisItem.MemberName, Disabled, Edit)
+                    DisplayMode: =If(User().FullName = ThisItem.MemberName, DisplayMode.Disabled, DisplayMode.Edit)
                     Fill: =RGBA(217, 26, 45, 1)
                     Font: =Font.'Lato Black'
                     FontWeight: =FontWeight.Semibold

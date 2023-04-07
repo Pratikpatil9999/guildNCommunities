@@ -1,8 +1,5 @@
 {
   "55bd11ce-1540-4e1d-8336-43032c5b7e78": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Office 365 Outlook",
@@ -20,9 +17,6 @@
     "id": "55bd11ce-1540-4e1d-8336-43032c5b7e78"
   },
   "59bc595d-2c49-4295-b900-697078d27880": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "SharePoint",
@@ -141,9 +135,6 @@
     "id": "59bc595d-2c49-4295-b900-697078d27880"
   },
   "64b36674-d9d3-4d87-a1c2-5fcc2c94b351": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "displayName": "Microsoft Teams",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1612/1.0.1612.3109/teams/icon.png",
@@ -158,9 +149,6 @@
     "id": "64b36674-d9d3-4d87-a1c2-5fcc2c94b351"
   },
   "6cba9de9-2faa-4c8d-b993-358233bbe43e": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "displayName": "Office 365 Users",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1611/1.0.1611.3104/office365users/icon.png",
@@ -176,9 +164,6 @@
     "id": "6cba9de9-2faa-4c8d-b993-358233bbe43e"
   },
   "e55f7f25-74ca-48aa-bbfc-87ca82df5358": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "SharePoint",

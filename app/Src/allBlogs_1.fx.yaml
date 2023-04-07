@@ -17,7 +17,7 @@
         Refresh(Blog);
         ClearCollect(UserCommunity, ShowColumns(Filter(User, Name=User().FullName), "Communities"));
         ClearCollect(UserCommunity1, { Communities: "All" }, UserCommunity);
-        SortByColumns(UserCommunity, "Communities", Ascending);
+        SortByColumns(UserCommunity, "Communities", SortOrder.Ascending);
         Set(DropDown,false);
 
     RectQuickActionBar6 As rectangle:
@@ -40,8 +40,8 @@
             )*/
             If(
                 Dropdown1.Selected.Communities = "All", 
-              Sort(  Search(Blog, TextInput6.Text, "Title"),ID,Descending),
-              Sort(  Search(Filter(Blog, Tags=Dropdown1.Selected.Communities), TextInput6.Text, "Title"),ID,Descending)
+              Sort(  Search(Blog, TextInput6.Text, "Title"),ID,SortOrder.Descending),
+              Sort(  Search(Filter(Blog, Tags=Dropdown1.Selected.Communities), TextInput6.Text, "Title"),ID,SortOrder.Descending)
             )
         Layout: =Layout.Vertical
         TemplatePadding: =0

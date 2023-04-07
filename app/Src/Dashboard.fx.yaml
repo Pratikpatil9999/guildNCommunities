@@ -10,7 +10,7 @@
                             SortByColumns(
                                 Blog,
                                 "Created",
-                                Ascending
+                                SortOrder.Ascending
                             ),
                             "dates",
                             Text(
@@ -27,9 +27,9 @@
                 "GroupDate"
             )
         );
-        ClearCollect(TopFiveUsers, FirstN(SortByColumns(User, "Points", Descending), 5));
-        ClearCollect(TopFiveCommunities, FirstN(SortByColumns(Community_1, "Blogs", Descending), 5));
-        ClearCollect(TopFivePopularGuilds, FirstN(SortByColumns(Guild, "Members", Descending), 5));
+        ClearCollect(TopFiveUsers, FirstN(SortByColumns(User, "Points", SortOrder.Descending), 5));
+        ClearCollect(TopFiveCommunities, FirstN(SortByColumns(Community_1, "Blogs", SortOrder.Descending), 5));
+        ClearCollect(TopFivePopularGuilds, FirstN(SortByColumns(Guild, "Members", SortOrder.Descending), 5));
 
     RectQuickActionBar5 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)

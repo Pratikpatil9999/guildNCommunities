@@ -22,7 +22,7 @@
             "GroupedItems"
             )
         );
-        ClearCollect(GroupUsersByGuild, SortByColumns(GroupUsersByGuild, "Total Points", Descending));
+        ClearCollect(GroupUsersByGuild, SortByColumns(GroupUsersByGuild, "Total Points", SortOrder.Descending));
         ClearCollect(CommunityEvents, Filter('Event Track Details', Teams_Channel_Name=Dropdown7.Selected.Title && Status="Approved"));
         ClearCollect(
             KnowledgeSharing,

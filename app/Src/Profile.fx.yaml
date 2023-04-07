@@ -23,7 +23,7 @@
             "GroupedItems"
             )
         );
-        ClearCollect(GroupUsers, SortByColumns(GroupUsers, "Sum of Value", Descending));
+        ClearCollect(GroupUsers, SortByColumns(GroupUsers, "Sum of Value", SortOrder.Descending));
         Clear(Ranks); 
         ForAll(
             GroupUsers,
@@ -35,7 +35,7 @@
                 }
             )
         );
-        Sort(Ranks, Descending);
+        Sort(Ranks, SortOrder.Descending);
         Set(UserRank, LookUp(Ranks, UserName=User().FullName).No);
         /*ClearCollect(UserBlog, Filter(Blog, 'Created By'.DisplayName=User().FullName));
         ClearCollect(
@@ -74,7 +74,7 @@
                             SortByColumns(
                                 Filter('Event Track Details', 'Created By'.DisplayName=User().FullName && Status="Approved"),
                                 "Created",
-                                Ascending
+                                SortOrder.Ascending
                             ),
                             "dates",
                             Text(

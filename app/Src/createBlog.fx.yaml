@@ -109,8 +109,8 @@
                 OnChange: |-
                     =Set(currentGuildName, LookUp(Community_1, Title=Dropdown2.Selected.Communities).Guild);
                     Set(currentGuild, LookUp(Guild, Title=currentGuildName));
-                    Set(channelId,First(Split(currentGuild.Channel,"\")).Result);
-                    Set(teamId,First(Split(currentGuild.Team,"\")).Result);
+                    Set(channelId,First(ForAll(Split(currentGuild.Channel,"\"), {Result: ThisRecord.Value})).Result);
+                    Set(teamId,First(ForAll(Split(currentGuild.Team,"\"), {Result: ThisRecord.Value})).Result);
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
                 SelectionFill: =RGBA(0, 51, 102, 1)

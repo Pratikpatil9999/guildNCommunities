@@ -205,8 +205,8 @@ Screen3 As screen:
             =Clear(BlogCollection);
             ForAll(If(
                 Dropdown1_3.Selected.Communities = "All", 
-              Sort( Testimonials,ID,Descending),
-              Sort( Filter(Testimonials, Community=Dropdown1_3.Selected.Communities),ID,Descending)
+              Sort( Testimonials,ID,SortOrder.Descending),
+              Sort( Filter(Testimonials, Community=Dropdown1_3.Selected.Communities),ID,SortOrder.Descending)
             ),
             Collect(
             BlogCollection,
@@ -214,8 +214,8 @@ Screen3 As screen:
             FirstN(
             AddColumns(If(
                 Dropdown1_3.Selected.Communities = "All", 
-              Sort( Testimonials,ID,Descending),
-              Sort( Filter(Testimonials, Community=Dropdown1_3.Selected.Communities),ID,Descending)
+              Sort( Testimonials,ID,SortOrder.Descending),
+              Sort( Filter(Testimonials, Community=Dropdown1_3.Selected.Communities),ID,SortOrder.Descending)
             ),
             "RowNumber", 
             CountRows(BlogCollection) + 1

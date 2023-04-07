@@ -1,9 +1,9 @@
 "Community As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |-
         =Set(_dateSelected, Today());
-        Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), Days));
-        Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
-        Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));        
+        Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+        Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+        Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));        
         Set(_calendarVisible, true);
         ClearCollect(GuildCommunities ,Filter(Community_1, Guild=data.Title));
         ClearCollect(GuildEvents,Filter(Event,Guild=data.Title));
@@ -658,7 +658,6 @@
             MonthDayGallery1_1 As gallery.MonthDayGallery:
                 AccessibleLabel: ="Days of selected month"
                 BorderColor: =RGBA(0, 89, 178, 1)
-                DisplayMode: =Edit
                 Height: =332
                 Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
                 Layout: =Layout.Vertical
@@ -680,7 +679,7 @@
                     Visible: |-
                         =/*Visible if calendar events are found on this day*/               
                         /*CountRows(Filter(MyCalendarEvents, DateValue(Text(Start)) = DateAdd(_firstDayInView,ThisItem.Value,Days))) > 0 && !Subcircle1_1.Visible && Title3_1.Visible*/
-                        !IsBlank(LookUp(GuildEvents,Date=DateAdd(_firstDayInView,ThisItem.Value,Days)).Title)
+                        !IsBlank(LookUp(GuildEvents,Date=DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days)).Title)
                     Width: =6.5
                     X: =MonthDayGallery1_1.TemplateWidth / 2 - Self.Width / 2
                     Y: =MonthDayGallery1_1.TemplateHeight * (0.75)
@@ -717,16 +716,15 @@
                     FocusedBorderThickness: =2
                     Height: =60
                     OnSelect: |-
-                        =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));
-                        Navigate(EventDetails, None, { data: data.Title });
+                        =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days));
+                        Navigate(EventDetails, BorderStyle.None, { data: data.Title });
                         //Set(calendarpop,true);
                     Size: =17 * MonthDayGallery1_1.TemplateWidth / 91
                     TabIndex: =0
-                    Text: =Day(DateAdd(_firstDayInView,ThisItem.Value,Days))
-                    VerticalAlign: =Middle
+                    Text: =Day(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days))
                     Visible: |-
                         =/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ 
-                         !(DateAdd(_firstDayInView,ThisItem.Value,Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value,Days)) + 1 > _lastDayOfMonth)
+                         !(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days)) + 1 > _lastDayOfMonth)
                     Width: =60
                     Wrap: =false
                     ZIndex: =3
@@ -752,7 +750,6 @@
                     OnSelect: =Select(Parent)
                     Size: =17 * WeekdayGallery1_1.TemplateWidth / 77
                     Text: =ThisItem.Value
-                    VerticalAlign: =Middle
                     Width: =WeekdayGallery1_1.TemplateWidth
                     Wrap: =false
                     X: =WeekdayGallery1_1.TemplateWidth / 2 - Self.Width / 2
@@ -779,9 +776,9 @@
                 Icon: =Icon.ChevronLeft
                 OnSelect: |-
                     =/*changes month view to previous month*/
-                    Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, -1, Months));
-                    Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
-                    Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));
+                    Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, -1, TimeUnit.Months));
+                    Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                    Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
                     /*collects calendar events for all days in current month view. Updates _minDate to prevent duplicate data collection if user returns to this month view*/
                     /*If(_minDate > _firstDayOfMonth, Set(_minDate, _firstDayOfMonth); Collect(MyCalendarEvents, Office365Outlook.GetEventsCalendarViewV2(_myCalendar.Name, Text(_minDate, UTC), Text(_lastDayOfMonth, UTC)).value))*/
                 PaddingBottom: =7
@@ -804,10 +801,10 @@
                 Icon: =Icon.ChevronRight
                 OnSelect: |-
                     =/*changes month view to next month*/
-                    Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, 1, Months));
-                    Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
+                    Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, 1, TimeUnit.Months));
+                    Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
                     /*collects calendar events for all days in current month view. Updates _maxDate to prevent duplicate data collection if user returns to this month view*/
-                    Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));
+                    Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
                     /*If(_lastDayOfMonth > _maxDate, Set(_maxDate, _lastDayOfMonth); Collect(MyCalendarEvents, Office365Outlook.GetEventsCalendarViewV2(_myCalendar.Name, Text(_firstDayOfMonth, UTC), Text(_maxDate, UTC)).value))*/
                 PaddingBottom: =7
                 PaddingLeft: =7
@@ -828,7 +825,7 @@
                 Height: =35
                 Icon: =Icon.Add
                 OnSelect: |-
-                    =Navigate(EventForm,None,{ guildName: data.Title });
+                    =Navigate(EventForm,BorderStyle.None,{ guildName: data.Title });
                 Width: =40
                 X: =1255
                 Y: =2
@@ -859,7 +856,7 @@
                 Height: =51
                 Icon: =Icon.AddUser
                 OnSelect: |-
-                    =Navigate('Community Form',Cover,{data:data});
+                    =Navigate('Community Form',ScreenTransition.Cover,{data:data});
                 Tooltip: ="Create Community"
                 Width: =49
                 X: =805
@@ -914,7 +911,7 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =Navigate(GuildStats, None, { guildName: data.Title })
+            =Navigate(GuildStats, BorderStyle.None, { guildName: data.Title })
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =30
@@ -1048,7 +1045,7 @@
                     OnSelect: |+
                         =Select(Parent);
                         ClearCollect(eventName, LookUp(GuildEvents, Title=ThisItem.Title));
-                        Navigate(eventFeedback,None,{event:Gallery8.Selected});
+                        Navigate(eventFeedback,BorderStyle.None,{event:Gallery8.Selected});
                         
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0

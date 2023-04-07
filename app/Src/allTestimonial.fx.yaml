@@ -3,7 +3,7 @@
     OnVisible: |-
         =ClearCollect(UserCommunity, ShowColumns(Filter(User, Name=User().FullName), "Communities"));
         ClearCollect(UserCommunity1, { Communities: "All" }, UserCommunity);
-        SortByColumns(UserCommunity, "Communities", Ascending);
+        SortByColumns(UserCommunity, "Communities", SortOrder.Ascending);
         Set(DropDown,false);
 
     Canvas15 As fluidGrid.fluidGridWithBlankCard:
@@ -31,8 +31,8 @@
                 Items: |+
                     =If(
                         Dropdown1_2.Selected.Communities = "All", 
-                      Sort( Testimonials,ID,Descending),
-                      Sort( Filter(Testimonials, Community=Dropdown1_2.Selected.Communities),ID,Descending)
+                      Sort( Testimonials,ID,SortOrder.Descending),
+                      Sort( Filter(Testimonials, Community=Dropdown1_2.Selected.Communities),ID,SortOrder.Descending)
                     )
                     
                 TemplateSize: =520
